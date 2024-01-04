@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>MID ONLY</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4174d3ba-53f9-4077-be27-0f3fb8d8fe9c" class="page sans"><header><h1 class="page-title">MID ONLY</h1><p class="page-description"></p></header><div class="page-body"><p id="e6e72214-3335-4ae3-8c54-710266cf3480" class=""><strong>Primary and Secondary Energy Sources </strong></p><p id="4f991498-ccc1-40da-b47d-c48fb4a10fb3" class=""><strong>Primary: </strong>Natural resources directly extracted for energy. Include fossil fuels and renewables.</p><ol type="1" id="57edbb21-bfb8-4af5-ae91-fda51234353b" class="numbered-list" start="1"><li><strong>Fossil Fuels:</strong> Non-renewable resources like coal, oil, and natural gas.</li></ol><ol type="1" id="1d64d0c5-c28f-4644-ae3c-10feccff4311" class="numbered-list" start="2"><li><strong>Renewable Resources:</strong> Natural sources like sunlight, wind, water, and geothermal heat.</li></ol><p id="bfbca2d7-7756-4820-a1ad-710de193b245" class=""><strong>Secondary: </strong>Derived from primary sources via conversion. Practical for human use.</p><ol type="1" id="aa08bddf-d244-4f1d-bfb1-ae3a51153167" class="numbered-list" start="1"><li><strong>Electricity:</strong> Derived from primary sources, used for various purposes.</li></ol><ol type="1" id="3218769c-555d-4248-8218-a1439621be55" class="numbered-list" start="2"><li><strong>Fuels:</strong> Gasoline, diesel, and natural gas obtained from primary sources.</li></ol><p id="d61e295c-ab92-4e61-b472-21ee01ddaff5" class="">
+</p><p id="b87d6e6e-24c6-4abc-9bc1-f0bf76c362b9" class=""><strong>The Future of Renewable Energy Sources in India:</strong></p><p id="2387dd57-16aa-401b-9cd8-604dd968fabf" class="">India boosting renewable energy for energy needs and environment.</p><ol type="1" id="2a609ac2-5623-4f7f-bf54-858e6aade164" class="numbered-list" start="1"><li><strong>Solar Energy:</strong> Expanding solar power generation for rural and off-grid areas.</li></ol><ol type="1" id="deab6d45-092f-4dc2-b170-9cc975f67910" class="numbered-list" start="2"><li><strong>Wind Energy:</strong> Developing onshore and offshore wind farms.</li></ol><ol type="1" id="fa83a9b4-efc9-4dd5-bcc9-fb3d7be2e907" class="numbered-list" start="3"><li><strong>Hydropower:</strong> Exploring small and micro hydropower projects.</li></ol><ol type="1" id="e39da00d-5448-42d1-9637-43e348854424" class="numbered-list" start="4"><li><strong>Biomass and Bioenergy:</strong> Promoting biomass and biogas for rural electrification and cooking.</li></ol><ol type="1" id="8bcaa575-8e60-4757-b3fe-ef0aa0b09488" class="numbered-list" start="5"><li><strong>Geothermal and Ocean Energy:</strong> Early-stage development.</li></ol><ol type="1" id="454387c2-fe72-458e-b116-dcf91fa29729" class="numbered-list" start="6"><li><strong>Energy Storage:</strong> Enhancing energy storage infrastructure.</li></ol><ol type="1" id="46fc3a41-874b-4f85-a534-de3da1d3a1f4" class="numbered-list" start="7"><li><strong>Government Initiatives:</strong> Supporting renewable energy through policies and missions.</li></ol><ol type="1" id="f6f6dd82-5cb8-4be7-a9b9-8afadfc9c5bd" class="numbered-list" start="8"><li><strong>Investment and Innovation:</strong> Attracting investments and fostering technology innovation.</li></ol><hr id="7d8714a7-6c7e-434d-81e1-ed784e4f4b20"/><p id="c0d9d5c6-ca25-4a0b-9816-e53feddb5379" class=""><strong>Direct Radiation:</strong> Sunlight that reaches the Earth&#x27;s surface in a straight path from the sun, creating sharp shadows and localized heating.</p><p id="2fb68389-c792-49d6-b497-36b788e0b320" class=""><strong>Diffuse Radiation:</strong> Sunlight scattered in various directions by atmospheric elements, resulting in softer, diffused illumination and contributing to general surface heating.</p><table id="ad931310-10bf-486c-a25e-d18de8264fc1" class="simple-table"><tbody><tr id="1d3a9bbb-edfb-4f6d-b9e1-d512e149ec61"><td id="b;h|" class="" style="width:178.34375px">Characteristic</td><td id="PqaQ" class="" style="width:254.25px"><strong>Direct Radiation</strong></td><td id="NaTS" class="" style="width:286px"><strong>Diffuse Radiation</strong></td></tr><tr id="9ad3407d-7e7f-404a-824c-204651df95d1"><td id="b;h|" class="" style="width:178.34375px"><strong>Source</strong></td><td id="PqaQ" class="" style="width:254.25px">Sunlight in a straight path</td><td id="NaTS" class="" style="width:286px">Scattered sunlight from the sky</td></tr><tr id="2d728af3-fa89-4b55-8a2a-30e8445e4739"><td id="b;h|" class="" style="width:178.34375px"><strong>Intensity</strong></td><td id="PqaQ" class="" style="width:254.25px">High intensity, focused</td><td id="NaTS" class="" style="width:286px">Lower intensity, scattered</td></tr><tr id="a21ea377-2a70-4844-8318-afb8aaec82c7"><td id="b;h|" class="" style="width:178.34375px"><strong>Appearance</strong></td><td id="PqaQ" class="" style="width:254.25px">Sharp shadows</td><td id="NaTS" class="" style="width:286px">Soft, diffused illumination</td></tr><tr id="7a0546b7-64a0-43ca-a3e4-29c97fa8c442"><td id="b;h|" class="" style="width:178.34375px"><strong>Daily Variation</strong></td><td id="PqaQ" class="" style="width:254.25px">Peaks around solar noon</td><td id="NaTS" class="" style="width:286px">Evenly distributed throughout the day</td></tr><tr id="1d762919-6d52-4436-8516-86e2522105f1"><td id="b;h|" class="" style="width:178.34375px"><strong>Influence of Clouds</strong></td><td id="PqaQ" class="" style="width:254.25px">Blocked by clouds</td><td id="NaTS" class="" style="width:286px">Less affected, already scattered</td></tr><tr id="6df100cd-2e7a-47e9-8c70-6d675bd1b881"><td id="b;h|" class="" style="width:178.34375px"><strong>Surface Heating</strong></td><td id="PqaQ" class="" style="width:254.25px">Localized heating</td><td id="NaTS" class="" style="width:286px">General heating of surfaces</td></tr><tr id="ee36d0c4-507b-4a3a-bb23-0379aea8095b"><td id="b;h|" class="" style="width:178.34375px"><strong>Measurement</strong></td><td id="PqaQ" class="" style="width:254.25px">Direct normal irradiance (DNI)</td><td id="NaTS" class="" style="width:286px">Global horizontal irradiance (GHI)</td></tr></tbody></table><hr id="b04b053b-41ec-48cc-8d90-20295ec9886b"/><p id="1589fc37-7ca1-4738-b2a3-580eeee4951c" class=""><strong>Briefly analyze about environmental impact of solar energy system.</strong></p><p id="16fde62e-1df7-4662-a09a-ebbf3b5eeef7" class="">Solar energy systems have several positive environmental impacts, making them a sustainable and eco-friendly energy option.</p><ul id="b74ebe3b-2eac-4586-a5a3-0c295d66efd4" class="bulleted-list"><li style="list-style-type:disc">Greenhouse Gas Emissions Reduction</li></ul><ul id="c3fbee27-d8b0-422d-abda-555d3180f897" class="bulleted-list"><li style="list-style-type:disc">Low Carbon Footprint</li></ul><ul id="2f4121a2-fa4a-456f-a375-c75e714fb2b0" class="bulleted-list"><li style="list-style-type:disc">Water Conservation</li></ul><ul id="65fd02f3-9e75-4695-b2b7-68ec7a8280f9" class="bulleted-list"><li style="list-style-type:disc">Renewable and Sustainable</li></ul><ul id="3e69cf83-fcfb-4c68-9edb-e5636cbfd2f4" class="bulleted-list"><li style="list-style-type:disc">Land Use Efficiency</li></ul><ul id="a9e5e738-8dab-4ef5-aa71-f3cdd66756bf" class="bulleted-list"><li style="list-style-type:disc">Reduced Dependency on Fossil Fuels</li></ul><ul id="fede2cc3-0475-4c0e-af76-60d633d0d6e2" class="bulleted-list"><li style="list-style-type:disc">Job Creation and Economic Benefits</li></ul><hr id="90a2b929-42ae-46fd-ae66-26976e0e877e"/><p id="7dba12a1-3d36-4c7f-9903-dc4453d51e8d" class=""><strong>Solar Azimuth Angle:</strong><div class="indented"><ul id="e84140d5-e496-4d09-8e04-601f9d5d12e9" class="bulleted-list"><li style="list-style-type:disc">Compass direction of sunlight.</li></ul><ul id="40c30d8f-9ed2-4ea5-914b-ceba0dad2574" class="bulleted-list"><li style="list-style-type:disc">Measured in degrees clockwise from true north.</li></ul><ul id="3e2f6ee5-44ab-4d8e-af78-3630b9bbc830" class="bulleted-list"><li style="list-style-type:disc">180 degrees: sun in the south, 90 degrees: east, 270 degrees: west, 0 degrees: north.</li></ul><ul id="8e80179f-4595-40e2-b2c7-6dc8ed882978" class="bulleted-list"><li style="list-style-type:disc">Crucial for optimizing solar panel orientation.</li></ul></div></p><figure id="de766d5e-4e52-4854-825f-ed33ed66c72a" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled.png"><img style="width:576px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled.png"/></a></figure><p id="659ae1c3-cf4c-413a-bfab-65b8f9e24c39" class=""><strong>Solar Altitude Angle:</strong><div class="indented"><ul id="4ac21032-c1ca-498e-a9e3-a98d1af187a2" class="bulleted-list"><li style="list-style-type:disc">Angle between the sun and the horizontal plane.</li></ul><ul id="1e440dcb-b428-4213-a343-ec43eaf3530e" class="bulleted-list"><li style="list-style-type:disc">Represents the sun&#x27;s height in the sky.</li></ul><ul id="eb161bad-25d1-4c19-acad-aeb9be7c644f" class="bulleted-list"><li style="list-style-type:disc">Measured in degrees above the horizon.</li></ul><ul id="db7e52f1-2e6b-4445-8cfd-4f03f219c442" class="bulleted-list"><li style="list-style-type:disc">90 degrees: sun directly overhead, 0 degrees: on the horizon.</li></ul><ul id="2a3c8586-b000-4f9e-9231-01f7b8734b92" class="bulleted-list"><li style="list-style-type:disc">Essential for evaluating solar potential at a specific location and time.</li></ul></div></p><hr id="6446d7b7-5398-4569-be29-4599164b3da0"/><figure id="a4660949-24c8-420a-811a-fe62f33d93c1" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%201.png"><img style="width:480px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%201.png"/></a></figure><p id="4ea23dbc-6083-44a6-a7d3-b35daabc1f71" class=""><strong>Pyranometer for Measuring Solar Radiation:</strong></p><p id="e96e098d-5fd2-4deb-9161-3d306e3eb15d" class="">Measures total solar radiation reaching the Earth&#x27;s surface, including direct and diffuse sunlight.</p><p id="62982ef5-e53b-427f-86fe-6ca040864982" class=""><strong>Working Principle: </strong>Uses a thermopile sensor covered with a glass dome. Solar radiation heats the sensor, generating a voltage output proportional to radiation intensity.</p><p id="c1043699-a3b8-4703-af84-ef75c0308220" class=""><strong>Units of Measurement: </strong>Readings in watts per square meter (W/m²), typically per hour (W/m²/hr).</p><p id="cf396e2f-cee3-4c87-a801-93187cf16733" class=""><strong>Calibration: </strong>Requires periodic calibration to maintain accuracy.</p><p id="7063118e-1dbc-4a23-9da2-242b8b40000d" class=""><strong>Applications:</strong></p><ul id="944da586-484d-4136-871d-6a5d066edc18" class="bulleted-list"><li style="list-style-type:disc">Weather and climate monitoring.</li></ul><ul id="823cefe1-7c2d-4a14-a0c3-210c146fab63" class="bulleted-list"><li style="list-style-type:disc">Solar energy system design and monitoring.</li></ul><ul id="1e8551e6-6586-4169-9a9e-ef0bce9745a7" class="bulleted-list"><li style="list-style-type:disc">Agriculture and environmental research.</li></ul><p id="bfe85834-d655-4607-a8c0-048fd7150340" class=""><strong>Types of Pyranometers:</strong></p><ul id="8bccecb0-a915-4747-8506-d494424a4067" class="bulleted-list"><li style="list-style-type:disc">First Class (high-precision).</li></ul><ul id="501c9da7-173a-486f-8533-4725b153afbb" class="bulleted-list"><li style="list-style-type:disc">Second Class (general meteorological use).</li></ul><ul id="ad8d7bd0-2813-499d-9e7b-558e5b0f67b9" class="bulleted-list"><li style="list-style-type:disc">Secondary Standard (specific research applications).</li></ul><hr id="655484c8-31bc-419a-b57f-d7a5b7510977"/><p id="e4ac4e40-6d60-4823-aab2-9e246bcab4fc" class=""><strong>Solar Radiation on Tilted Surface</strong></p><p id="8129d845-cf0e-439c-8bf1-e2dab4f93ac6" class="">Solar radiation on a tilted surface involves sunlight falling on an inclined structure, like a solar panel or roof, optimized for efficient solar energy capture.</p><p id="2cefde37-56a1-4231-8523-04d55ddc7fc5" class=""><strong>Orientation - </strong>Surfaces tilted towards equator receive more annual radiation</p><p id="7b16a5c0-b3ce-42ab-bc52-1c871075d932" class=""><strong>Tilt Angle</strong></p><ul id="8846533d-ee55-409f-80bc-ac2eaf50078e" class="bulleted-list"><li style="list-style-type:disc">Optimum tilt ≈ latitude of location, Maximizes annual radiation</li></ul><ul id="a9788864-51df-4a68-9df2-d012447bba45" class="bulleted-list"><li style="list-style-type:disc">Seasonal tilt adjustments can further boost radiation</li></ul><p id="3d543941-46b4-4120-bf86-d23fb26adc33" class=""><strong>Radiation Components</strong></p><ul id="a8f0d9c1-52fa-4dab-ab9b-a2737736fc6a" class="bulleted-list"><li style="list-style-type:disc">Beam: Direct sunlight</li></ul><ul id="3d2061f0-a3e5-486e-b870-e531ea243837" class="bulleted-list"><li style="list-style-type:disc">Diffuse: Scattered sunlight</li></ul><ul id="25d04b1f-017b-45a0-a3b3-cf1cc65e516c" class="bulleted-list"><li style="list-style-type:disc">Reflected: Sunlight reflected from ground</li></ul><p id="5753658d-752a-4bc4-a31a-363316a7e73c" class=""><strong>Calculation Models</strong></p><ul id="3c5c9c77-6504-4604-aea6-ec38c26f55ef" class="bulleted-list"><li style="list-style-type:disc">Predict radiation on titled surfaces</li></ul><ul id="515daf0e-0bd6-4c56-b0e4-29c763725237" class="bulleted-list"><li style="list-style-type:disc">Vary in complexity and accuracy</li></ul><p id="2d5267c6-8cca-41a2-818e-5db67c753b5c" class=""><strong>Tracking Surfaces</strong></p><ul id="807c4fe3-6c38-4ab5-9c53-854dd162807c" class="bulleted-list"><li style="list-style-type:disc">Follow sun&#x27;s path to receive more radiation</li></ul><ul id="9f38a209-8326-4d26-9b52-366a3edad4fe" class="bulleted-list"><li style="list-style-type:disc">Up to 40% more than optimally tilted fixed surfaces</li></ul><p id="daebe965-3df5-4422-85b0-232d1b388b47" class="">
+</p><hr id="59811241-045f-4584-9975-6708d0f1242d"/><table id="d07b303a-fec5-4cdd-95c9-437eaadf367d" class="simple-table"><tbody><tr id="90bb7cec-5937-4f82-a0c3-28a8a6fcbebd"><td id="evlu" class="" style="width:339px"><strong>Terrestrial Solar Radiation</strong></td><td id="\nzc" class="" style="width:450px"><strong>Extraterrestrial Solar Radiation</strong></td></tr><tr id="f0e15396-7e9e-4098-9d3d-cd5668b71d04"><td id="evlu" class="" style="width:339px">Solar energy reaching Earth&#x27;s surface.</td><td id="\nzc" class="" style="width:450px">Solar energy in space before atmospheric interaction.</td></tr><tr id="fb7be86a-44ca-46ca-a254-f484b16b49b1"><td id="evlu" class="" style="width:339px">Affected by atmospheric conditions.</td><td id="\nzc" class="" style="width:450px">Calculated based on Earth-Sun distance and solar constant.</td></tr><tr id="71570fb8-ac21-43aa-aab0-91b1dc882e13"><td id="evlu" class="" style="width:339px">Includes direct, diffuse, and reflected sunlight.</td><td id="\nzc" class="" style="width:450px">Represents the ideal solar energy potential.</td></tr><tr id="441656ce-0a9b-4e29-ac82-7010feea07bb"><td id="evlu" class="" style="width:339px">Influenced by factors like clouds and air quality.</td><td id="\nzc" class="" style="width:450px">Serves as a baseline for solar energy without atmospheric effects.</td></tr><tr id="7a0e507a-fa31-4e7a-be63-b26785145c0a"><td id="evlu" class="" style="width:339px">Varied due to geography, time, and local factors.</td><td id="\nzc" class="" style="width:450px">Consistent, providing a reference for solar energy calculations.</td></tr></tbody></table><hr id="5219f008-9c68-46e2-9257-3181d598de4e"/><p id="326d79c6-df94-46c4-a83e-1917eede34b3" class=""><strong>Sun shine recorder</strong></p><p id="0256a5de-e3bf-46d7-877a-5381ef73bfc2" class="">A sunshine recorder is a device used to measure the amount of sunshine at a given location. Sunshine is defined as direct beam radiation from the sun reaching the earth&#x27;s surface.</p><div id="3a109dc2-6b39-4436-babe-93d4c6acc97f" class="column-list"><div id="09cfc2ed-b365-4dff-8334-90e6d13181af" style="width:62.5%" class="column"><p id="e30cd3f5-5af6-471e-9e13-f14932840211" class="">Glass ball - Focuses sunlight onto card</p><p id="3dfc5159-4814-4492-a22b-3b89735d60e7" class="">Card holder - Holds cards that record burn traces</p><p id="b5a3cce7-a38a-4a1d-86b2-81dfde41bf99" class="">Tracking - Clockwork mechanism follows sun&#x27;s path</p><p id="af8b7a6e-6e0f-4844-b136-49c0fcc31d42" class="">Housing - Protects from weather; allows sunlight</p><p id="fdb8210a-ef59-4ad2-a8ca-2a4c5d9e0fe0" class="">
+</p></div><div id="ae5b5023-8cb2-4d4b-930e-585a6aee6f73" style="width:37.49999999999999%" class="column"><figure id="37240b27-df81-4142-b591-4ed43280d223" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%202.png"><img style="width:320px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%202.png"/></a></figure></div></div><p id="7f2d41ff-cc19-4b5a-8660-d4a6f842cf54" class="">When beam sunshine strikes the spherical glass lens, it focuses and burns a trace onto the graduated cards mounted vertically behind it. The length of the burn traces is measured and totaled to calculate sunshine duration for that period. The card holder simultaneously moves at a constant speed on a 24 hour clock to account for changing position of the sun.</p><p id="17d8d9c5-ac1c-41b2-a813-9182e78aa066" class="">The sunshine recorder provides reliable data on sunshine hours and variability over time, allowing analysis of historical trends at a given geographical location.</p><hr id="6ce0302d-48f1-4127-945d-6f684e0c507f"/><p id="47abd38e-9eef-4fec-ba87-4a37891bc883" class=""><strong>Solar Flat Plate Collectors:</strong></p><p id="217b7392-c2b9-4189-ba5a-380659c5aab9" class="">The devices that convert sunlight into thermal energy. They consist of a dark absorber plate inside a covered enclosure. When sunlight hits the plate, it absorbs heat, which is then transferred to a fluid circulating through tubes. Widely used for water and space heating, they are simple, reliable, and cost-effective for harnessing solar thermal energy.</p><table id="894e0849-9e56-494c-9111-4d79543dfff7" class="simple-table"><tbody><tr id="bf346cdd-5fbe-4ca9-865c-a18cfe5c82b4"><td id="[&gt;lx" class="" style="width:188.5px"><strong>Advantage</strong></td><td id="ei`@" class="" style="width:224.5px"><strong>Disadvantage</strong></td></tr><tr id="11cd3d9e-92ae-4d38-9d0e-b53e875c42df"><td id="[&gt;lx" class="" style="width:188.5px">Environmentally Friendly</td><td id="ei`@" class="" style="width:224.5px">High Initial Cost</td></tr><tr id="e4f70b72-cfbd-42ad-bd6a-b0c1159cbfe8"><td id="[&gt;lx" class="" style="width:188.5px">Low Operating Costs</td><td id="ei`@" class="" style="width:224.5px">Weather Dependence</td></tr><tr id="dd33c534-ebac-44d5-8ae5-56ba27048240"><td id="[&gt;lx" class="" style="width:188.5px">Long Lifespan</td><td id="ei`@" class="" style="width:224.5px">Space Requirements</td></tr><tr id="d03ab1bd-7c61-4080-84be-ba10e68f98eb"><td id="[&gt;lx" class="" style="width:188.5px">Reliable Technology</td><td id="ei`@" class="" style="width:224.5px">Limited Efficiency</td></tr><tr id="fddf27aa-8b29-4d8f-83e7-0d78c9fce596"><td id="[&gt;lx" class="" style="width:188.5px">Energy Independence</td><td id="ei`@" class="" style="width:224.5px">Heat Loss at Night</td></tr><tr id="adb48f2e-0df8-4ff5-a97e-e4ce3e4a89ee"><td id="[&gt;lx" class="" style="width:188.5px">Versatility</td><td id="ei`@" class="" style="width:224.5px">Maintenance Requirements</td></tr><tr id="4c04a068-2faa-4c6f-be8e-3777281329c2"><td id="[&gt;lx" class="" style="width:188.5px">Steady Output</td><td id="ei`@" class="" style="width:224.5px">Aesthetic Considerations</td></tr><tr id="b94d4a98-b28e-49c3-9b6a-b8c4cac1e686"><td id="[&gt;lx" class="" style="width:188.5px">Low Visual Impact</td><td id="ei`@" class="" style="width:224.5px">Installation Complexity</td></tr></tbody></table><hr id="3eac3033-95ec-4505-b2eb-defc9c125dec"/><p id="d4e6f192-394a-4d0f-a810-cf84c8cb9584" class=""><strong>Materials Used for Solar Collectors:</strong></p><p id="299d556b-ee16-4091-b45b-26efd44a9b1b" class="">Solar collectors are designed to efficiently capture and convert sunlight into usable energy. The choice of materials plays a crucial role in their performance and durability.</p><table id="0047bcee-97da-41ca-b9c2-b683283f69d9" class="simple-table"><tbody><tr id="db740a3e-d0d7-4775-bbab-89206d4e6bd4"><td id="\NMZ" class="" style="width:175.640625px">Component</td><td id="U}n]" class="" style="width:370px">Materials</td></tr><tr id="be0f6933-b701-4313-9341-2a8ef76b55c5"><td id="\NMZ" class="" style="width:175.640625px">Absorber Plate</td><td id="U}n]" class="" style="width:370px">Copper or Aluminum, Selective Coatings</td></tr><tr id="08630b14-77fc-4b51-96db-0265a404053d"><td id="\NMZ" class="" style="width:175.640625px">Cover</td><td id="U}n]" class="" style="width:370px">Glass or Polycarbonate</td></tr><tr id="6026c205-db35-4b88-a4ff-6cef7b9c91c9"><td id="\NMZ" class="" style="width:175.640625px">Insulation</td><td id="U}n]" class="" style="width:370px">Fiberglass or Foam</td></tr><tr id="dfe0e599-6b02-42d3-8878-a95791f916a8"><td id="\NMZ" class="" style="width:175.640625px">Tubes/Channels</td><td id="U}n]" class="" style="width:370px">Copper or Conductive Metals</td></tr><tr id="f0709943-8ddb-4522-a926-d3fc88d0c844"><td id="\NMZ" class="" style="width:175.640625px">Frame</td><td id="U}n]" class="" style="width:370px">Aluminum or Galvanized Steel</td></tr><tr id="94690552-1dbb-425c-a8ec-91d62eebb4ab"><td id="\NMZ" class="" style="width:175.640625px">Back Insulation</td><td id="U}n]" class="" style="width:370px">Polyurethane Foam or Fiberglass</td></tr><tr id="474dae82-9e59-4d17-8746-cd3d7b5cf921"><td id="\NMZ" class="" style="width:175.640625px">Seals/Gaskets</td><td id="U}n]" class="" style="width:370px">Silicone or Rubber</td></tr><tr id="47c29f5b-717a-4a96-ae33-f57de007801f"><td id="\NMZ" class="" style="width:175.640625px">Reflective Materials</td><td id="U}n]" class="" style="width:370px">Mirrors or Aluminum (for Concentrating Collectors)</td></tr></tbody></table><hr id="5040181d-fbad-4281-bce3-4424399ee49c"/><p id="fe25815e-4903-484f-8d1c-4d879e23b71a" class=""><strong>Compare concentrating collectors with flat plate collectors.</strong></p><table id="2a8f6f5b-7672-4b15-81a5-bc52cc85b2d3" class="simple-table"><tbody><tr id="09e7d5fb-d990-4e1d-aa30-1cefe0416783"><td id="CYNO" class="" style="width:187.046875px">Aspect</td><td id="W{ul" class="" style="width:308px">Flat Plate Collectors</td><td id="BvmT" class="" style="width:400.953125px">Concentrating Collectors</td></tr><tr id="6d210c7b-2c45-4761-9a4c-d886f5bd0400"><td id="CYNO" class="" style="width:187.046875px"><strong>Design</strong></td><td id="W{ul" class="" style="width:308px">Flat and compact</td><td id="BvmT" class="" style="width:400.953125px">Use mirrors or lenses for concentration</td></tr><tr id="e000b69c-2714-4019-adf6-7b57ef7f700d"><td id="CYNO" class="" style="width:187.046875px"><strong>Efficiency</strong></td><td id="W{ul" class="" style="width:308px">Generally lower</td><td id="BvmT" class="" style="width:400.953125px">Higher, especially for high-temperature</td></tr><tr id="4a55a30f-6a8c-40a2-babc-a7f9a8364ffb"><td id="CYNO" class="" style="width:187.046875px"><strong>Temperature Range</strong></td><td id="W{ul" class="" style="width:308px">Low to medium</td><td id="BvmT" class="" style="width:400.953125px">High-temperature applications</td></tr><tr id="01f68f3b-72cf-48c1-af74-c07a42a12736"><td id="CYNO" class="" style="width:187.046875px"><strong>Cost</strong></td><td id="W{ul" class="" style="width:308px">More cost-effective</td><td id="BvmT" class="" style="width:400.953125px">Higher cost due to precision optics</td></tr><tr id="c6450310-3b29-450b-9b09-8311aa4f1e08"><td id="CYNO" class="" style="width:187.046875px"><strong>Space Requirement</strong></td><td id="W{ul" class="" style="width:308px">More space for equivalent energy</td><td id="BvmT" class="" style="width:400.953125px">Higher energy output in a smaller footprint</td></tr><tr id="9ee14bcf-d9eb-49d1-a633-7eef11776f4d"><td id="CYNO" class="" style="width:187.046875px"><strong>Tracking Systems</strong></td><td id="W{ul" class="" style="width:308px">Typically fixed</td><td id="BvmT" class="" style="width:400.953125px">Often incorporate sun-tracking systems</td></tr><tr id="453350cf-28c7-4bc2-b77a-68b9d95673c7"><td id="CYNO" class="" style="width:187.046875px"><strong>Applications</strong></td><td id="W{ul" class="" style="width:308px">Water heating for residential, commercial</td><td id="BvmT" class="" style="width:400.953125px">Solar power plants, high-temperature industrial processes</td></tr><tr id="f304d499-eec6-40d6-b14a-9105750d6a9c"><td id="CYNO" class="" style="width:187.046875px"><strong>Complexity</strong></td><td id="W{ul" class="" style="width:308px">Simple construction, easier maintenance</td><td id="BvmT" class="" style="width:400.953125px">More complex with tracking systems</td></tr></tbody></table><p id="fd7c818f-c9df-4885-b7df-e422d121d109" class=""><strong>Explain about the principle of operation concentrating collector.</strong></p><p id="823b78f3-ace8-4ebd-903e-6d3137c60284" class="">Concentrating solar collectors focus sunlight onto a small area to achieve high temperatures useful for power generation and industrial heating.</p><table id="6b724584-0775-4821-ad92-67f6f8b76699" class="simple-table"><tbody><tr id="f49024f9-38be-4cf1-80a2-ed741934cf55"><td id="NlcT" class="">Principle of Operation</td><td id="uGqO" class="" style="width:521px">Description</td></tr><tr id="d753b309-7038-4988-ab5c-bc34f4ad985a"><td id="NlcT" class="">Concentration</td><td id="uGqO" class="" style="width:521px">Reflectors/lenses concentrate sunlight 10-1,000x onto small absorber</td></tr><tr id="e11ad0ab-4f2f-40eb-8e08-2d9f0f3209ae"><td id="NlcT" class="">Sun Tracking</td><td id="uGqO" class="" style="width:521px">Tracking systems redirect beam radiation to absorber</td></tr><tr id="8103ce9c-b969-4534-b445-41c99e3193bb"><td id="NlcT" class="">Heat Conversion</td><td id="uGqO" class="" style="width:521px">Concentrated sunlight converted into heat when absorbed</td></tr><tr id="3e438a06-55c7-4406-a3f0-718b1747e0d5"><td id="NlcT" class="">Heat Transfer</td><td id="uGqO" class="" style="width:521px">Absorber transfers heat to working fluid</td></tr><tr id="84c4158f-8993-42c7-a0ca-a5428e7d3222"><td id="NlcT" class="">Energy Application</td><td id="uGqO" class="" style="width:521px">Fluid&#x27;s thermal energy used for power or heating</td></tr><tr id="56275cae-7fbd-4414-9fb4-22af4e73fd07"><td id="NlcT" class="">Temperatures</td><td id="uGqO" class="" style="width:521px">Higher concentration ratios yield 100-1500°C temps</td></tr><tr id="929ac0a5-cd4e-480e-bd2f-95b117b94a5c"><td id="NlcT" class="">Designs</td><td id="uGqO" class="" style="width:521px">Parabolic and Fresnel designs used</td></tr><tr id="b1c5c634-0915-4d61-93a5-f2d83ac0f2fe"><td id="NlcT" class="">Tracking</td><td id="uGqO" class="" style="width:521px">Solar tracking optimizes radiation interception</td></tr></tbody></table><hr id="1a7bf27d-a65e-4609-aa85-a1b10faf248c"/><p id="2def0215-9306-44e0-bd6a-0c3fab6eaa57" class=""><strong>What are the different operating parameters that influence the functionality of solar collectors?</strong></p><ol type="1" id="0ad9aaa9-e48b-43b5-bf03-52319bb5e7a9" class="numbered-list" start="1"><li>Solar Irradiance</li></ol><ol type="1" id="996eea99-6f18-4b3c-9bf9-90e9da7e83da" class="numbered-list" start="2"><li>Collector Temperature</li></ol><ol type="1" id="71c4b5af-5779-4ee6-8e7f-5173625cd4fe" class="numbered-list" start="3"><li>Collector Orientation</li></ol><ol type="1" id="d7ef60ca-f03c-45e5-af22-0dc588e97e34" class="numbered-list" start="4"><li>Tracking Systems</li></ol><ol type="1" id="a481b995-6d4c-4d0f-9646-c9a47c2e557d" class="numbered-list" start="5"><li>Wind Speed and Direction</li></ol><ol type="1" id="6b135fc2-d827-4d15-ab3d-5361347730a5" class="numbered-list" start="6"><li>Shading</li></ol><ol type="1" id="9cbcf101-6923-4dbc-8f6d-b582773f8fc7" class="numbered-list" start="7"><li>Dust and Debris</li></ol><ol type="1" id="90a5ad14-0df8-4aa1-9e07-6fcd7fab0f04" class="numbered-list" start="8"><li>Heat Transfer Fluid</li></ol><ol type="1" id="78f54c8a-16af-4517-bf12-0a59c9d50cf8" class="numbered-list" start="9"><li>Insulation</li></ol><ol type="1" id="1fe9b60a-96f6-4efc-b5f4-ef453d26059e" class="numbered-list" start="10"><li>Temperature Control</li></ol><ol type="1" id="ff78c373-0cc6-4ade-8425-a2e80291c96e" class="numbered-list" start="11"><li>Operating Conditions</li></ol><ol type="1" id="b940c97f-d8d4-4486-8265-0849ddffff33" class="numbered-list" start="12"><li>Environmental Conditions</li></ol><ol type="1" id="2303299c-0eb6-4904-aaa5-57d926763788" class="numbered-list" start="13"><li>Collector Material</li></ol><ol type="1" id="559dc90e-411a-4580-9567-314fadcdd688" class="numbered-list" start="14"><li>Type of Collector</li></ol><ol type="1" id="921385cb-951c-4dc6-99b9-82659c70d238" class="numbered-list" start="15"><li>Load Demand</li></ol><hr id="3843636f-3669-4acb-b3e3-912218ad6359"/><p id="0c578a1e-6050-4d74-a57c-34aabdd8bfe2" class=""><strong>Solar Water Heating</strong></p><p id="f78b029c-d131-4fc2-bd99-9df6bdeb8475" class="">Efficient technology to harness solar energy for water heating</p><p id="71cc9202-8c2a-403b-9741-bfe57471c3d0" class="">Renewable energy technology that uses the sun&#x27;s energy to heat water for various domestic, commercial, and industrial applications. It involves the use of solar collectors to capture sunlight and transfer the collected heat to water.<em>.</em></p><p id="43459681-9904-49b4-a1ee-e62ae2c4bf77" class=""><strong>Applications:</strong></p><ol type="1" id="42bbb4f6-c593-48d1-acda-0b375e8982cd" class="numbered-list" start="1"><li><strong>Domestic Hot Water</strong>: Provides hot water for homes, reducing energy bills and emissions.</li></ol><ol type="1" id="4f8943fb-12fd-48b4-a0aa-ead39457906c" class="numbered-list" start="2"><li><strong>Commercial Buildings</strong>: Used in hotels, restaurants, and laundries for hot water needs.</li></ol><ol type="1" id="d1db480c-59d1-4c06-8cce-88a7b04b42c9" class="numbered-list" start="3"><li><strong>Swimming Pools</strong>: Extends swimming seasons and cuts heating costs.</li></ol><ol type="1" id="12298bc9-be74-4b86-b050-ddb734e84adf" class="numbered-list" start="4"><li><strong>Industrial Processes</strong>: Supports manufacturing processes requiring hot water.</li></ol><ol type="1" id="50918879-a481-4576-94fc-797967d0c6ae" class="numbered-list" start="5"><li><strong>Space Heating</strong>: Used for heating in some regions.</li></ol><ol type="1" id="0a640dc2-f754-44c2-bf51-34d4c25b947a" class="numbered-list" start="6"><li><strong>Agriculture</strong>: Benefits livestock farms, poultry houses, and greenhouses.</li></ol><ol type="1" id="f5193468-b536-4969-b31e-26abf577755a" class="numbered-list" start="7"><li><strong>Remote Areas</strong>: Valuable in areas with limited energy access.</li></ol><ol type="1" id="17eebecf-db9e-4a10-b6a8-9b3ecc20e0a6" class="numbered-list" start="8"><li><strong>Desalination</strong>: Solar energy aids in converting seawater to fresh water.</li></ol><p id="cf0f2801-b0b2-42b3-9a45-62a15a641078" class="">
+</p><hr id="01a17e5b-1990-45e0-8805-de0b4b2d4ba7"/><p id="48b0f8c9-e394-4156-b95b-31f3af62254e" class=""><strong>Solar Distillation</strong></p><div id="0af68b22-8324-445d-b169-70222be452a1" class="column-list"><div id="fc161c93-d6d9-4a9c-93b2-8bb37082794d" style="width:50%" class="column"><p id="58e2cf38-da38-48ae-b54c-1b9279a07d07" class="">Process that utilizes solar energy to produce fresh and potable water from saline or impure water sources, such as seawater, brackish water, or contaminated water. It&#x27;s a simple, sustainable, and effective method for water purification and desalination, especially in areas with limited access to clean drinking water.</p></div><div id="bfd1bfca-5456-424d-ae3e-774f2e90110b" style="width:50%" class="column"><figure id="eb841be8-03d4-4a6f-9bc5-aa4ff258fbce" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%203.png"><img style="width:432px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%203.png"/></a></figure></div></div><p id="25102896-4030-43ed-a5c2-93acfbd040cf" class=""><strong>Process:</strong></p><ol type="1" id="b26dd8b2-1739-4278-a821-404d900c6487" class="numbered-list" start="1"><li><strong>Solar Collector</strong>: A sloped, transparent surface traps sunlight.</li></ol><ol type="1" id="c7597e38-ad94-4236-be76-3cabdc40d5d8" class="numbered-list" start="2"><li><strong>Water Supply</strong>: Saline or impure water is placed below the collector.</li></ol><ol type="1" id="cf5343ef-dd79-4408-827b-ff3924507c39" class="numbered-list" start="3"><li><strong>Evaporation</strong>: Sunlight heats the water, causing it to evaporate, leaving impurities.</li></ol><ol type="1" id="277ec086-dbbe-4d08-b701-076e748aae9f" class="numbered-list" start="4"><li><strong>Condensation</strong>: Water vapor rises and condenses on the cooler collector surface.</li></ol><ol type="1" id="2f59ac44-8ba0-49d4-bad8-26ac8b7e6440" class="numbered-list" start="5"><li><strong>Collection</strong>: Purified water collects in a separate container.</li></ol><p id="3b2e45d5-d5b0-455a-acbe-7ecbb866f1c8" class=""><strong>Advantages:</strong></p><ul id="9ee1fa1e-5ad0-4b29-81f6-f958df698d34" class="bulleted-list"><li style="list-style-type:disc"><strong>Purification</strong>: Effectively removes salts and contaminants.</li></ul><ul id="dd04ed22-e18c-4452-9092-f8d4f298bce8" class="bulleted-list"><li style="list-style-type:disc"><strong>Sustainability</strong>: Uses solar energy, making it eco-friendly.</li></ul><ul id="579fb52c-d010-429e-b72b-df79146cecdb" class="bulleted-list"><li style="list-style-type:disc"><strong>Reliability</strong>: Works in areas with limited access to electricity.</li></ul><ul id="24901753-5592-4345-8318-d3bc1f208490" class="bulleted-list"><li style="list-style-type:disc"><strong>Low Operating Costs</strong>: Minimal maintenance and operating costs.</li></ul><ul id="75099c84-32b0-4f7a-a90c-04ec7b093215" class="bulleted-list"><li style="list-style-type:disc"><strong>Versatility</strong>: Applicable at various scales.</li></ul><p id="9509be78-f2b3-4cb2-bf9f-d6231055704f" class=""><strong>Limitations:</strong></p><ul id="b5176544-efef-415e-8fbb-6377094bb0b8" class="bulleted-list"><li style="list-style-type:disc"><strong>Low Production Rate</strong>: Slower compared to other methods.</li></ul><ul id="9c3116c7-2f48-42f6-a7cf-dfc1062c6c40" class="bulleted-list"><li style="list-style-type:disc"><strong>Weather Dependency</strong>: Efficiency depends on weather conditions.</li></ul><ul id="995c4f3a-bfce-40d8-ad09-ceb936955f3b" class="bulleted-list"><li style="list-style-type:disc"><strong>Space Requirements</strong>: Requires ample space for equipment.</li></ul><hr id="a78dc4c1-eb84-4d1d-ab91-3ebbaed9ed4d"/><p id="b161944f-472e-4e59-8c55-0297ff53da72" class=""><strong>Differentiate between sensible and latent heat storage systems</strong></p><table id="d3a98a7c-2075-4295-8a9c-dfc9def594db" class="simple-table"><tbody><tr id="30e88181-2100-4789-af1d-c67fb4b511db"><td id="YO\X" class="" style="width:154.234375px">Basis</td><td id="RNfN" class="" style="width:290px"><strong>Sensible Heat Storage</strong></td><td id="XkFV" class="" style="width:298px"><strong>Latent Heat Storage</strong></td></tr><tr id="4ad5754f-9b2e-4f99-be61-f6bce49bc8f5"><td id="YO\X" class="" style="width:154.234375px">Working Principle</td><td id="RNfN" class="" style="width:290px">Raises temperature of storage medium</td><td id="XkFV" class="" style="width:298px">Utilizes phase change of storage medium</td></tr><tr id="f82e3394-42ee-4931-9c2a-8f976bc5d7c8"><td id="YO\X" class="" style="width:154.234375px">Example Media</td><td id="RNfN" class="" style="width:290px">Water, rocks, concrete, oils</td><td id="XkFV" class="" style="width:298px">Paraffins, salt hydrates</td></tr><tr id="c5fb913e-2eb1-4bab-b895-31a92e1e180b"><td id="YO\X" class="" style="width:154.234375px">Phase Change</td><td id="RNfN" class="" style="width:290px">No phase change</td><td id="XkFV" class="" style="width:298px">Solid-liquid or liquid-gas</td></tr><tr id="cec885ae-8ede-4a26-9158-75c4e0dd15fd"><td id="YO\X" class="" style="width:154.234375px">Storage Density</td><td id="RNfN" class="" style="width:290px">Lower</td><td id="XkFV" class="" style="width:298px">Higher</td></tr><tr id="4dc00430-2d3e-4a2b-a068-0ac20b689fe8"><td id="YO\X" class="" style="width:154.234375px">Storage Process</td><td id="RNfN" class="" style="width:290px">Continuous over temperature difference</td><td id="XkFV" class="" style="width:298px">Isothermal during phase change</td></tr><tr id="f34e5f0c-7b19-46f1-b158-a94e572d9fef"><td id="YO\X" class="" style="width:154.234375px">Temperature Control</td><td id="RNfN" class="" style="width:290px">Less precise</td><td id="XkFV" class="" style="width:298px">Allows precise control</td></tr><tr id="445fea59-623b-43f0-9c2d-1ea6026cf4a2"><td id="YO\X" class="" style="width:154.234375px">Key Benefit</td><td id="RNfN" class="" style="width:290px">Simple medium heating/cooling</td><td id="XkFV" class="" style="width:298px">Greater storage capacity per unit volume</td></tr></tbody></table><p id="58d86bd7-141b-4c6d-b548-07dbf69e658b" class="">
+</p><figure id="e0017ab2-977e-4b6b-bd65-44ba694ee9ae" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%204.png"><img style="width:528px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%204.png"/></a></figure><p id="18ed4eb6-f24e-49c5-ae91-7e2570f11e3e" class="">
+</p><hr id="13fc6b87-804c-4d01-a8b9-72c678fcaa86"/><figure id="dd7b39b6-b565-4630-84bd-5334c393e53a" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%205.png"><img style="width:514px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%205.png"/></a></figure><p id="777e9d09-cbfa-48de-a533-d198018487b9" class=""><strong>working of a wind energy system</strong></p><p id="6f78fb52-f4f9-471f-aa5e-1ea19488212e" class="">A wind energy system works by capturing wind energy with rotor blades on top of a tower. The key components are:</p><ol type="1" id="6d4c6029-ae53-4ac4-8e0e-aeb5430d0f22" class="numbered-list" start="1"><li><strong>Rotor Blades</strong>: Capture wind energy.</li></ol><ol type="1" id="b2b78854-16c2-4539-9272-df37496c9e93" class="numbered-list" start="2"><li><strong>Nacelle</strong>: Contains a generator, gearbox, and control systems.</li></ol><ol type="1" id="4b3009c0-32c6-4374-a857-fa8a459a06c6" class="numbered-list" start="3"><li><strong>Generator</strong>: Converts mechanical energy into electricity.</li></ol><ol type="1" id="90ee0baf-c9a2-4d33-83db-1c73526a4d15" class="numbered-list" start="4"><li><strong>Tower</strong>: Supports the nacelle and rotor, allowing access to stronger winds.</li></ol><ol type="1" id="e61c0ac4-95d6-42d8-af45-0ffc00e41b33" class="numbered-list" start="5"><li><strong>Control System</strong>: Optimizes performance, adjusting blade pitch and nacelle orientation.</li></ol><ol type="1" id="eaeb6a5b-9deb-402b-b186-4abdad62024b" class="numbered-list" start="6"><li><strong>Grid Connection</strong>: Feeds electricity into the grid for distribution.</li></ol><hr id="d9f1a3f5-63bb-4d0d-acab-1e176853be29"/><p id="a9b7a3f3-6a1c-4d56-9303-772ccdf1b84f" class=""><strong>Choosing the right site for wind power generation involves several key considerations:</strong></p><ol type="1" id="d5b4b3c5-6424-440b-88d2-1445143103cb" class="numbered-list" start="1"><li><strong>Wind Resource</strong>: Assess wind speed and consistency.</li></ol><ol type="1" id="7dc09849-420b-4e02-bd3e-5c10db564e2d" class="numbered-list" start="2"><li><strong>Accessibility</strong>: Ensure easy access for construction and maintenance.</li></ol><ol type="1" id="6db179ee-a4be-49b5-969a-e022fe26bb53" class="numbered-list" start="3"><li><strong>Regulations</strong>: Comply with zoning and environmental regulations.</li></ol><ol type="1" id="a902b4f1-59ee-4813-9850-147d6cbc8435" class="numbered-list" start="4"><li><strong>Grid Connection</strong>: Be close to the electrical grid to minimize transmission losses.</li></ol><ol type="1" id="dc6b252f-441c-4b92-a4f4-1aff3254c0e5" class="numbered-list" start="5"><li><strong>Permitting</strong>: Understand and adhere to regulatory requirements.</li></ol><ol type="1" id="b61745f4-1207-4be0-b578-7c866b9128ed" class="numbered-list" start="6"><li><strong>Land Agreements</strong>: Secure land access and leasing agreements.</li></ol><ol type="1" id="926759cc-33fa-44f6-975d-e0ad169a78a9" class="numbered-list" start="7"><li><strong>Turbine Positioning</strong>: Optimize turbine placement for wind exposure.</li></ol><ol type="1" id="1035fe6d-eb41-4d08-9a82-3c2985111008" class="numbered-list" start="8"><li><strong>Maintenance Accessibility</strong>: Plan for easy maintenance access.</li></ol><ol type="1" id="7702e545-faa2-446b-a45f-68a2ecaf773f" class="numbered-list" start="9"><li><strong>Weather Conditions</strong>: Consider extreme weather events.</li></ol><ol type="1" id="42d71316-44b8-4466-a54d-3b388598349d" class="numbered-list" start="10"><li><strong>Community Support</strong>: Engage with and gain community acceptance.</li></ol><ol type="1" id="e80fc3a9-c464-464a-8bd1-e14b9d2822cf" class="numbered-list" start="11"><li><strong>Economic Viability</strong>: Evaluate costs, incentives, and price forecasts.</li></ol><ol type="1" id="44b3331b-0b03-425e-93b7-02b2bf35ba80" class="numbered-list" start="12"><li><strong>Grid Integration</strong>: Assess grid capacity for energy integration.</li></ol><hr id="a7dc4c40-b439-433d-bb18-7c8458b725a0"/><figure id="97610ea1-4c56-42a8-bbf4-2722ecccdae1" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%206.png"><img style="width:576px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%206.png"/></a></figure><p id="ef02b9f6-d60c-46c3-bf4f-4f6f77545314" class=""><strong>Vertical Axis Windmill:</strong></p><p id="48ad94d8-4875-4480-ad0e-5a781ec08c46" class="">Blades radiate from a vertical shaft, capturing wind from any direction.</p><p id="9fe7faec-9e26-4f6c-b370-c5a4f347d2f3" class=""><strong>Horizontal Axis Windmill:</strong></p><p id="26bfbc59-a134-4334-b338-7618831e56f9" class="">Blades spin like an airplane propeller on a horizontally positioned shaft, facing into the wind.</p><hr id="c530f3cb-f785-4e08-8cf1-15cce733402c"/><p id="065ddb0b-1a0a-4387-b884-b7e684c5b15d" class=""><strong>Horizontal-Axis Wind Turbines (HAWTs):</strong></p><table id="c85f611d-7ead-4ace-8685-0470a35a844a" class="simple-table"><tbody><tr id="0e49f61c-14e5-4ef4-b6c3-3322ec3ddb1d"><td id="tASH" class=""><strong>Advantages</strong></td><td id="dtwL" class="" style="width:421px"><strong>Disadvantages</strong></td></tr><tr id="343cccfa-aa7c-4647-bc34-bbb6b2dcb1df"><td id="tASH" class="">High Efficiency</td><td id="dtwL" class="" style="width:421px">Larger land footprint</td></tr><tr id="a0c530b5-77e9-473f-be1d-61e31118ab84"><td id="tASH" class="">Widespread Use</td><td id="dtwL" class="" style="width:421px">Higher visual and environmental impact</td></tr><tr id="18973db1-3939-430d-8da8-84d6d4835204"><td id="tASH" class="">Tall Tower Option</td><td id="dtwL" class="" style="width:421px">Complex maintenance and repair</td></tr><tr id="53ee38b8-ae07-46cf-84ae-ee1f1cb0f779"><td id="tASH" class="">Aesthetic Appeal</td><td id="dtwL" class="" style="width:421px">Wind direction dependence</td></tr><tr id="cd3ac683-9db8-462c-a1b3-b8b6fc87c593"><td id="tASH" class=""></td><td id="dtwL" class="" style="width:421px">Yaw and pitch mechanisms required</td></tr></tbody></table><p id="e5098385-77a9-445a-b931-b9770e3b528f" class=""><strong>Vertical-Axis Wind Turbines (VAWTs):</strong></p><table id="a542df2e-0d2d-4182-aae7-21f08a2fc317" class="simple-table"><tbody><tr id="f2ab4f91-3e58-4902-a98c-f5c817b47724"><td id="lXIz" class=""><strong>Advantages</strong></td><td id="~tep" class="" style="width:379px"><strong>Disadvantages</strong></td></tr><tr id="df916001-03b5-4b72-a56c-db43562042f0"><td id="lXIz" class="">Omnidirectional Capture</td><td id="~tep" class="" style="width:379px">Lower efficiency</td></tr><tr id="05f3bf87-b290-4692-8349-143f2378eb74"><td id="lXIz" class="">Low Wind Speed Operation</td><td id="~tep" class="" style="width:379px">Limited scaling</td></tr><tr id="2b0210a8-bb94-47bf-9e0c-61d4a3750eed"><td id="lXIz" class="">Simplicity</td><td id="~tep" class="" style="width:379px">Installation and maintenance complexity</td></tr><tr id="26989b6c-dd2d-4967-8297-347540ea6c1a"><td id="lXIz" class="">Aesthetic Appeal</td><td id="~tep" class="" style="width:379px">Noise and vibration potential</td></tr><tr id="e27793a5-8cf3-45e6-b81e-793940c8c842"><td id="lXIz" class=""></td><td id="~tep" class="" style="width:379px">Limited research and development</td></tr></tbody></table><hr id="d51707d9-ae0f-4e23-867b-3ad9c06d2d10"/><table id="05a8b9e1-8e13-4eb7-b6ad-7eab34826169" class="simple-table"><tbody><tr id="9fe3ac8d-5358-445b-9ed1-3a466a75e190"><td id="{Cws" class="" style="width:372px"><strong>Advantages of Vertical Axis Windmill</strong></td><td id="Pi`&lt;" class="" style="width:455px"><strong>Disadvantages of Vertical Axis Windmill</strong></td></tr><tr id="c13392dd-243a-4c53-9110-73119b5d9929"><td id="{Cws" class="" style="width:372px">1. Captures wind from any direction.</td><td id="Pi`&lt;" class="" style="width:455px">1. Generally lower efficiency compared to horizontal axis.</td></tr><tr id="108a4867-32aa-464f-a9fb-42c6d5accab6"><td id="{Cws" class="" style="width:372px">2. Can be mounted closer to the ground.</td><td id="Pi`&lt;" class="" style="width:455px">2. Complex mechanical structures may lead to higher maintenance.</td></tr><tr id="f4d3afa9-bc90-428f-8026-fe159d222135"><td id="{Cws" class="" style="width:372px">3. Suitable for areas with turbulent or variable winds.</td><td id="Pi`&lt;" class="" style="width:455px">3. Limited scalability for large-scale power generation.</td></tr></tbody></table><table id="16fb4e42-4e84-4893-800e-689a92855d70" class="simple-table"><tbody><tr id="b9f19886-332b-4c2c-9a32-4e007fdeeae9"><td id="WGcj" class="" style="width:410px"><strong>Advantages of Horizontal Axis Windmill</strong></td><td id="Xayw" class="" style="width:458px"><strong>Disadvantages of Horizontal Axis Windmill</strong></td></tr><tr id="607c82a2-5ba2-4809-b535-e84acb2d952c"><td id="WGcj" class="" style="width:410px">1. Higher efficiency due to better aerodynamics.</td><td id="Xayw" class="" style="width:458px">1. Requires a yaw system to track wind direction.</td></tr><tr id="04af0f54-6c2b-4f3d-a9ec-9f70880e61c6"><td id="WGcj" class="" style="width:410px">2. Well-established technology with a proven track record.</td><td id="Xayw" class="" style="width:458px">2. Maintenance can be challenging, especially at greater heights.</td></tr><tr id="15eeecba-c351-4e77-9e92-c8eaaabcc6ed"><td id="WGcj" class="" style="width:410px">3. Scalable for large-scale power generation.</td><td id="Xayw" class="" style="width:458px">3. Sensitive to turbulent wind conditions, affecting performance.</td></tr></tbody></table><hr id="743a24a5-806e-449a-b0e7-c689929f882c"/><p id="51dbeb11-81e3-4b79-8f9e-4e421aeddfbe" class=""><strong>Describe with a neat sketch working principle of any two types of bio-gas digesters</strong></p><figure id="6efdc3f1-6c93-46e4-ba10-2b5d3992aa7d" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%207.png"><img style="width:429px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%207.png"/></a></figure><table id="e32a45a3-4e79-4221-8e13-34b0d01f3c4a" class="simple-table"><tbody><tr id="94c1117a-0154-4f43-827a-57dcf14ef607"><td id="{IP;" class="" style="width:653px"><strong>Continuous Stirred-Tank Reactor (CSTR)</strong></td><td id="&gt;Sv`" class="" style="width:549px"><strong>Fixed-Dome Digester</strong></td></tr><tr id="3c1b482f-2f3e-4c13-9160-9c89c7e9cdbf"><td id="{IP;" class="" style="width:653px">Popular design for small to mid-scale biogas production.</td><td id="&gt;Sv`" class="" style="width:549px">Simple and low-cost, suitable for small-scale biogas production.</td></tr><tr id="68747878-5dab-4451-90ad-9e5fbc647795"><td id="{IP;" class="" style="width:653px"><strong>Working Principle:</strong></td><td id="&gt;Sv`" class="" style="width:549px"><strong>Working Principle:</strong></td></tr><tr id="321d1f3c-51c4-4b6c-a401-dd9d300cac0e"><td id="{IP;" class="" style="width:653px">1. <strong>Feedstock Input: </strong>Organic materials continuously or in batches.</td><td id="&gt;Sv`" class="" style="width:549px">1.<strong> Batch Loading:</strong> Organic waste loaded in batches.</td></tr><tr id="637079b4-bd31-4725-99b9-1f424e2eeec5"><td id="{IP;" class="" style="width:653px">2. <strong>Mixing:</strong> Constant stirring ensures microbial breakdown of organic matter.</td><td id="&gt;Sv`" class="" style="width:549px">2. <strong>Anaerobic Digestion: </strong>Microorganisms break down organics, producing biogas.</td></tr><tr id="192e524e-757e-43a7-8cfc-2fb88f3e4028"><td id="{IP;" class="" style="width:653px">3. <strong>Anaerobic Digestion:</strong> Microorganisms break down organics, producing methane-rich biogas.</td><td id="&gt;Sv`" class="" style="width:549px">3. <strong>Gas Storage:</strong> Biogas displaces slurry, creating pressure for storage.</td></tr><tr id="dfbd224d-0d41-454c-9029-f0bca87188b7"><td id="{IP;" class="" style="width:653px">4. <strong>Gas Collection:</strong> Methane and CO2 biogas collected for renewable energy.</td><td id="&gt;Sv`" class="" style="width:549px">4. <strong>Gas Utilization:</strong> Stored biogas withdrawn for cooking or lighting.</td></tr><tr id="e63047da-d38f-490e-b24a-441bc76737c8"><td id="{IP;" class="" style="width:653px">5. <strong>Effluent Output:</strong> Digested slurry, rich in nutrients, used as organic fertilizer.</td><td id="&gt;Sv`" class="" style="width:549px">5. <strong>Fertilizer Output:</strong> Effluent, rich in nutrients, used as organic fertilizer.</td></tr></tbody></table><hr id="6c913fde-6573-46ff-a089-6558286e96a1"/><p id="9d21c0ec-360b-4c68-b2b0-e7afa7469a57" class=""><strong>Explain how urban waste will be converted to energy</strong></p><p id="59b0072d-c37a-4768-b425-05d1681e8652" class="">Converting urban waste to energy involves various processes to harness the energy potential in waste materials.</p><table id="d081dfbe-8e7b-4ceb-bdda-80a06c4b2bf8" class="simple-table"><tbody><tr id="d46169e4-84fb-4636-aef7-a6df2e56ad71"><td id="mAEM" class="" style="width:233px">Step</td><td id="SfpB" class="" style="width:503px">Description</td></tr><tr id="37053ce3-e017-4068-9415-102947ca00cc"><td id="mAEM" class="" style="width:233px"><strong>Collection &amp; Segregation</strong></td><td id="SfpB" class="" style="width:503px">Collect waste, separate recyclables, organics, and non-recyclables.</td></tr><tr id="7445e468-a2e9-4f84-9e16-1080d32ccacd"><td id="mAEM" class="" style="width:233px"><strong>Recycling</strong></td><td id="SfpB" class="" style="width:503px">Process recyclables in dedicated facilities.</td></tr><tr id="541b2591-1b78-436d-9437-ecb1327382ff"><td id="mAEM" class="" style="width:233px"><strong>Organic Waste Treatment</strong></td><td id="SfpB" class="" style="width:503px">Use composting or anaerobic digestion for organic waste.</td></tr><tr id="cbd1989a-61f5-4d5c-9e34-e3bbe4dfbac6"><td id="mAEM" class="" style="width:233px"><strong>Biogas Production</strong></td><td id="SfpB" class="" style="width:503px">Microbial breakdown creates biogas from organics.</td></tr><tr id="9d0742da-499f-47ab-9f5e-2ace952cbe18"><td id="mAEM" class="" style="width:233px"><strong>Energy Use</strong></td><td id="SfpB" class="" style="width:503px">Utilize captured biogas for electricity, heating, or fuel.</td></tr><tr id="0b763f64-d88d-42c7-9775-65dfc27f359f"><td id="mAEM" class="" style="width:233px"><strong>Waste-to-Energy Incineration</strong></td><td id="SfpB" class="" style="width:503px">Incinerate non-recyclables for electricity.</td></tr><tr id="8e7a7bb1-d770-47ef-af95-93e4bddb3301"><td id="mAEM" class="" style="width:233px"><strong>Methane Capture from Landfills</strong></td><td id="SfpB" class="" style="width:503px">Extract methane from landfill decomposition.</td></tr><tr id="8b4aea0c-5dd4-4752-b51c-97597b69945c"><td id="mAEM" class="" style="width:233px"><strong>Thermal Processes</strong></td><td id="SfpB" class="" style="width:503px">Pyrolysis and gasification for syngas production.</td></tr><tr id="9e585b77-2145-4c6c-9751-da603c3ce1c1"><td id="mAEM" class="" style="width:233px"><strong>District Heating</strong></td><td id="SfpB" class="" style="width:503px">Apply waste-to-energy heat for district heating.</td></tr><tr id="e8bf0171-f2de-4230-88f4-1704087b7272"><td id="mAEM" class="" style="width:233px"><strong>Environmental Controls</strong></td><td id="SfpB" class="" style="width:503px">Implement strict controls to minimize emissions.</td></tr></tbody></table><hr id="e1da84a3-b79b-4e82-8b14-5ac1725e4620"/><p id="4bfc8117-b758-49b5-9d62-d56c4c7f51cc" class=""><strong>What are various biomass conversion processes? Explain any one process in detail<br/><br/></strong>Thermochemical conversion of biomass to syngas for electricity, heat, and biofuel synthesis.</p><p id="2a8b8143-6e92-4f21-bdc4-266b9e497f09" class=""><strong>Steps:</strong></p><ol type="1" id="9983323f-7041-4e70-a4ef-60a287b71d12" class="numbered-list" start="1"><li><strong>Feedstock Prep: </strong>Prepare and sometimes dry biomass for efficiency.</li></ol><ol type="1" id="29278cef-628c-4cc6-b252-300f85bbc6e9" class="numbered-list" start="2"><li><strong>Gasification Reaction: </strong>High-temp gasifier converts biomass to syngas (H2, CO, CO2, CH4).</li></ol><ol type="1" id="a686224a-959b-49b6-9ea3-70a0d66dfe88" class="numbered-list" start="3"><li><strong>Gas Cleanup: </strong>Filtration and tar cracking for syngas quality.</li></ol><ol type="1" id="b964930e-2d77-4fe1-a921-ea5198481721" class="numbered-list" start="4"><li><strong>Syngas Usage: </strong>Applications: electricity, heat, and biofuel synthesis.</li></ol><p id="168c4418-47a4-4bce-8fcc-725fc3b5b9bb" class=""><strong>Advantages:</strong></p><ul id="cdf38130-5771-4186-9154-3cceca85e9a6" class="bulleted-list"><li style="list-style-type:disc"><strong>Renewable Energy: </strong>Sustainable source using biomass.</li></ul><ul id="049fb3eb-67e4-47d7-b187-717a2fb0a6ff" class="bulleted-list"><li style="list-style-type:disc"><strong>Waste Utilization:</strong> Eco-friendly waste disposal with various biomass feedstocks.</li></ul><ul id="5951e81e-3efd-482f-ae51-c9862db26ec6" class="bulleted-list"><li style="list-style-type:disc"><strong>Flexible Feedstocks:</strong> Adaptable to different biomass types.</li></ul><hr id="2748eaf5-c0d2-4e11-bf3d-66da61569bbf"/><p id="932f7b19-b186-4bb0-b56f-beabedd2ede3" class=""><strong>Examine the various factors affecting the generation of Bio-gas.</strong></p><ol type="1" id="100d7882-07d4-4bd0-8fb7-81ff1ff936da" class="numbered-list" start="1"><li><strong>Feedstock Composition:</strong> Influences biogas quantity and efficiency.</li></ol><ol type="1" id="6b29a647-fdca-436d-a1ec-15a4346721f1" class="numbered-list" start="2"><li><strong>Temperature:</strong> Impacts production rates—mesophilic and thermophilic conditions.</li></ol><ol type="1" id="9a5c9a51-4043-492a-bf99-a18676808308" class="numbered-list" start="3"><li><strong>Retention Time:</strong> Longer durations enhance breakdown and biogas production.</li></ol><ol type="1" id="5b8ca5d5-c562-48ed-815e-bdb75ca50384" class="numbered-list" start="4"><li><strong>C/N Ratio (Carbon-to-Nitrogen):</strong> Optimal balance supports efficient methane production.</li></ol><ol type="1" id="6e7cbf87-ff64-4c5f-8349-e5f9447031b8" class="numbered-list" start="5"><li><strong>pH Level:</strong> Crucial for microbial activity and biogas production.</li></ol><ol type="1" id="eaae7072-1b08-4fb5-817d-0a3cc91ae1ec" class="numbered-list" start="6"><li><strong>Particle Size:</strong> Smaller sizes aid microbial action and digestion.</li></ol><ol type="1" id="a0b9719a-90b5-47e8-b45f-9e742e01564b" class="numbered-list" start="7"><li><strong>Inhibitors:</strong> Heavy metals can impede microbial activity and biogas production.</li></ol><ol type="1" id="7fc6bf31-b679-4c57-938a-0e974a5d42ae" class="numbered-list" start="8"><li><strong>HRT (Hydraulic Retention Time):</strong> Longer HRT enhances overall gas yield.</li></ol><ol type="1" id="988c8e4b-2b5c-474d-9df3-4b8f2b32a5be" class="numbered-list" start="9"><li><strong>Digester Design:</strong> Influences biogas production rates.</li></ol><ol type="1" id="2b7a7131-12eb-40a8-aac2-64d34352ffae" class="numbered-list" start="10"><li><strong>Mixing and Agitation:</strong> Prevents zones with poor microbial activity.</li></ol><ol type="1" id="ac89c95a-975a-4322-aafa-be9505ce9b11" class="numbered-list" start="11"><li><strong>Microbial Community:</strong> Composition and diversity impact organic matter breakdown and biogas production.</li></ol><ol type="1" id="7cc5e16c-0b5f-4741-8519-997cef72d171" class="numbered-list" start="12"><li><strong>Nutrient Availability:</strong> Crucial for microbial growth and efficient biogas production.</li></ol><p id="2bc7bbf1-afeb-4487-ab49-d5d731c91bdd" class="">
+</p><hr id="aaa05ff8-eb80-4dee-94f2-d74374a713f9"/><p id="e2b748bc-c3f1-430b-be1c-fab71e9578d0" class="">Module 4</p><p id="cb77f234-e257-481e-ab5c-689a829a79dc" class=""><strong>With a neat diagram explain the principle of Tidal power energy generation.</strong></p><figure id="2bb5dca2-aad9-4806-b2fe-d213a7a16b87" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%208.png"><img style="width:909px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%208.png"/></a></figure><p id="c19c775d-d105-4911-aa22-805c32dc84dc" class="">
+</p><ol type="1" id="4797b9ca-e6f7-4c90-a80c-2710e0614418" class="numbered-list" start="1"><li><strong>Tidal Motion: </strong>Moon and sun gravitational forces create predictable tides.</li></ol><ol type="1" id="49372f9c-b58c-40e4-a39c-c8fa6e900347" class="numbered-list" start="2"><li><strong>Tidal Range: </strong>Vertical tide difference yields potential energy.</li></ol><ol type="1" id="c7179710-114c-4087-9b73-05d89356b7da" class="numbered-list" start="3"><li><strong>Tidal Stream: </strong>Turbines capture energy from horizontal tidal currents.</li></ol><ol type="1" id="4adc2bcc-7e3d-45ea-a0c8-40e27d3d7706" class="numbered-list" start="4"><li><strong>Tidal Range Systems: </strong>Barrages capture and release water for energy.</li></ol><ol type="1" id="b4b5e50c-9250-4075-b499-acaf35f58ad8" class="numbered-list" start="5"><li><strong>Tidal Stream Systems: </strong>Submerged turbines harness tidal current energy.</li></ol><ol type="1" id="1042da79-1729-4ffe-932b-4536c84f7980" class="numbered-list" start="6"><li><strong>Predictable and Renewable: </strong>Regular tidal cycles offer reliable, renewable energy.</li></ol><ol type="1" id="ae5708fd-9cab-4dac-9fb4-a12341522384" class="numbered-list" start="7"><li><strong>Environmental Considerations: </strong>Balancing energy benefits with environmental impact.</li></ol><ol type="1" id="fc09a5aa-1310-4f80-95e0-99e6d446baf3" class="numbered-list" start="8"><li><strong>Site-Specific Challenges: </strong>Effective in areas with significant tidal range or strong tidal streams.</li></ol><hr id="d1042764-d24c-4955-bcd2-86c42ee04b64"/><p id="d9674021-6abe-48ad-9e80-103bf8baa148" class=""><strong>Explain the principle of Oceanic Thermal energy conversion systems</strong></p><figure id="0c66e7af-af97-4d56-9613-9ff512f856e1" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%209.png"><img style="width:432px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%209.png"/></a></figure><p id="8b6440aa-8ebd-4349-8e03-c14fa28931f7" class=""><strong>Oceanic Thermal Energy Conversion (OTEC): </strong>Systems leverage temperature differences between warm surface water and cold deep water to generate electricity.</p><table id="3ee43daa-dafd-4b08-85cd-711362408b15" class="simple-table"><tbody><tr id="85ce1344-e3b8-400f-b04a-0e12c2e7729b"><td id="&lt;Ne{" class="" style="width:253px"><strong>Aspect</strong></td><td id="QVnC" class="" style="width:557px"><strong>Description</strong></td></tr><tr id="fbaa42a6-c36b-43f2-8149-9bff62c4b704"><td id="&lt;Ne{" class="" style="width:253px"><strong>Temperature Gradient Exploitation</strong></td><td id="QVnC" class="" style="width:557px">Utilizes temperature contrast between warm surface and cold deep seawater.</td></tr><tr id="cedbc601-99d9-4ebf-b38d-e58338240012"><td id="&lt;Ne{" class="" style="width:253px"><strong>Evaporation and Condensation</strong></td><td id="QVnC" class="" style="width:557px">Warm surface water vaporizes a working fluid, driving a turbine.</td></tr><tr id="119e210c-74ba-4b89-9593-e8232b5f698b"><td id="&lt;Ne{" class="" style="width:253px"><strong>Turbine Operation</strong></td><td id="QVnC" class="" style="width:557px">Converts mechanical energy into electricity.</td></tr><tr id="d024d54b-95cc-45f9-a4b1-0357e257a21d"><td id="&lt;Ne{" class="" style="width:253px"><strong>Cold Water Condensation</strong></td><td id="QVnC" class="" style="width:557px">Vapor is condensed using cold deep seawater, releasing latent heat.</td></tr><tr id="337fdf56-d8bd-46b1-8465-dc1e687dd653"><td id="&lt;Ne{" class="" style="width:253px"><strong>Closed or Open Cycle</strong></td><td id="QVnC" class="" style="width:557px">Systems can be closed (low-boiling fluid) or open (direct seawater vapor).</td></tr><tr id="bc404b97-467f-4ed2-bfc8-abe296cbbf2d"><td id="&lt;Ne{" class="" style="width:253px"><strong>Three OTEC Types</strong></td><td id="QVnC" class="" style="width:557px">Open, closed, and hybrid systems with variations in design.</td></tr><tr id="e18df830-8169-4f47-920b-9e0ce61ce6cf"><td id="&lt;Ne{" class="" style="width:253px"><strong>Sustainable and Renewable</strong></td><td id="QVnC" class="" style="width:557px">Harnesses perpetual ocean temperature differences for renewable energy.</td></tr></tbody></table><hr id="c8e2d2cb-7c4c-49a2-970c-bc71fb444674"/><p id="9692cf7e-6c19-44b1-a1bc-1e71d66907cc" class=""><strong>Infer the nature of geothermal fields and choose the places of geothermal occurrence in India	</strong></p><p id="e8763dc2-d6d1-4d82-9262-945b03cc933e" class="">Geothermal fields occur where hot subsurface rocks release heat that rises to the surface as hot water and steam. This happens in regions with recent volcanic activity, as well as places where high heat flow from the earth&#x27;s interior occurs such as fault zones and thin crust.</p><p id="de19a3f4-e260-4190-b57c-70d14f2168d8" class=""><strong>Geothermal Occurrence in India</strong></p><ul id="9fc24ee0-9c43-4dc6-8c73-99aed356a07d" class="bulleted-list"><li style="list-style-type:disc">Himalayan geothermal belt in northwest has hot springs due to tectonic activity</li></ul><ul id="88bacf43-6da9-4182-827b-6aed65651d8a" class="bulleted-list"><li style="list-style-type:disc">Tattapani and Puga fields in Himachal Pradesh</li></ul><ul id="2936f9be-1865-40e6-aa3a-f176d3cf5faf" class="bulleted-list"><li style="list-style-type:disc">Geothermal springs in Ladakh and Jammu &amp; Kashmir</li></ul><ul id="9ad9efdf-0d76-4b7f-b066-cb98b9978196" class="bulleted-list"><li style="list-style-type:disc">Cambay Graben in Gujarat</li></ul><ul id="987dd749-2f83-4131-84d7-0f4b52cb33bd" class="bulleted-list"><li style="list-style-type:disc">Coastal regions in Maharashtra and West Bengal</li></ul><ul id="70592d80-5a37-449c-ae4a-301cda51a1d5" class="bulleted-list"><li style="list-style-type:disc">Tapping potential could provide clean energy and heat in the future</li></ul><hr id="0d39a287-b909-49da-b2ff-f35430752e48"/><p id="91936123-745d-4b7a-9f45-7c7a0f187c36" class=""><strong>Working of Open cycle OTEC plant</strong></p><p id="d1349001-b5b5-4189-8663-e2381b6f4367" class="">A type of facility that utilizes the temperature difference between warm surface seawater and cold deep seawater to generate electricity.					</p><table id="b47b77aa-0bdf-4920-a69f-8c988f674253" class="simple-table"><tbody><tr id="c3cf6941-a865-4b14-ae76-ad4c9802b34c"><td id="lEcC" class=""><strong>Step</strong></td><td id="}&lt;DZ" class="" style="width:455px"><strong>Description</strong></td></tr><tr id="66a1e144-f745-4748-8b9f-02f5bf680e3a"><td id="lEcC" class="">Warm Water Vaporization</td><td id="}&lt;DZ" class="" style="width:455px">Uses warm surface water to vaporize a low-boiling fluid.</td></tr><tr id="92101343-1497-4075-bcf9-4e520bfe0815"><td id="lEcC" class="">Turbine Operation</td><td id="}&lt;DZ" class="" style="width:455px">Expanding vapor drives turbine, producing mechanical energy.</td></tr><tr id="37653214-70d9-41d4-a0c0-e66888550718"><td id="lEcC" class="">Electricity Generation</td><td id="}&lt;DZ" class="" style="width:455px">Turbine powers generator, converting to electrical energy.</td></tr><tr id="34a293ca-5a87-4bbc-80b7-35fbdf33e996"><td id="lEcC" class="">Cold Water Condensation</td><td id="}&lt;DZ" class="" style="width:455px">Cold seawater condenses vapor, releasing latent heat.</td></tr><tr id="d77d7934-278a-4e5d-a4ae-0131fad3609b"><td id="lEcC" class="">Continuous Cycle</td><td id="}&lt;DZ" class="" style="width:455px">Ongoing process for sustained electricity generation.</td></tr></tbody></table><hr id="42be0eb0-ffa1-49a0-a655-ebc286eeabbe"/><p id="e3bb5769-9c2b-41b5-b29a-27acfa3b3056" class=""><strong>Discuss vapour dominated geothermal plant with a diagram</strong></p><figure id="32585c43-b883-4071-9daf-50cb9db35279" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2010.png"><img style="width:624px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2010.png"/></a></figure><p id="69392653-06d2-48c9-bbb5-94fd14c85311" class=""><strong>Vapor Dominated Geothermal Plants</strong></p><p id="7175b979-f102-4759-b2ea-cc1c17a65c51" class="">These plants use geothermal reservoirs that consist mostly of pressurized dry steam. Wells are drilled into the geothermal resource to allow the steam to rise to the surface. The steam is then piped directly to a turbine/generator unit to produce electricity.</p><table id="2a9b91cc-338e-4168-816c-7cf85bce3106" class="simple-table"><tbody><tr id="e612b67f-9ded-4212-bffa-9212df05a29f"><td id="kdIR" class="" style="width:198.90625px"><strong>Step</strong></td><td id="uF&gt;D" class="" style="width:469px"><strong>Description</strong></td></tr><tr id="d22de091-87e9-4f76-86a7-be3ae1915717"><td id="kdIR" class="" style="width:198.90625px">Reservoir Access</td><td id="uF&gt;D" class="" style="width:469px">Drilling into steam-rich geothermal reservoirs.</td></tr><tr id="80cd7664-cb2d-44d6-b154-63fb7ad5c346"><td id="kdIR" class="" style="width:198.90625px">Steam Extraction</td><td id="uF&gt;D" class="" style="width:469px">Hot steam (500-700°F) rises through production wells.</td></tr><tr id="28775f04-62d1-428f-9768-965e23bc2b4d"><td id="kdIR" class="" style="width:198.90625px">Turbine/Generator Unit</td><td id="uF&gt;D" class="" style="width:469px">Piping steam directly to generate electricity.</td></tr><tr id="dd7d3c80-bb0d-41c8-9d70-3114f1fca9cd"><td id="kdIR" class="" style="width:198.90625px">Electricity Generation</td><td id="uF&gt;D" class="" style="width:469px">Steam-driven turbines spin generators for power.</td></tr><tr id="9655313b-4c13-4061-b0bb-ac4dc779fb73"><td id="kdIR" class="" style="width:198.90625px">Reinjection Process</td><td id="uF&gt;D" class="" style="width:469px">Used steam is reinjected into the reservoir.</td></tr><tr id="9ba2e8fd-ba0b-433a-9431-efb99591fd63"><td id="kdIR" class="" style="width:198.90625px">Cooling Tower Utilization</td><td id="uF&gt;D" class="" style="width:469px">Cooling tower cools steam before reinjection.</td></tr></tbody></table><p id="46847665-fdcc-4e54-8f96-685c0de2c774" class="">Benefits:</p><ul id="c5d63f1c-b7ba-4477-9da0-02e85ecf6e19" class="bulleted-list"><li style="list-style-type:disc">Simple, efficient conversion of steam into electricity</li></ul><ul id="4305a29d-240a-47f5-b455-7a3a10372872" class="bulleted-list"><li style="list-style-type:disc">No water or heat exchangers needed - steam powers turbine directly</li></ul><ul id="e6bb43c1-8ee6-44b7-829f-61eb71d8eccd" class="bulleted-list"><li style="list-style-type:disc">Renewable and sustainable energy source</li></ul><hr id="b71bd402-d117-448f-88de-b92cc0fa31d1"/><p id="7210e308-ab24-422c-88e9-2f1b06319ee9" class=""><strong>Analyze the working of single basin tidal power plant.</strong></p><figure id="1516bbf0-69ab-4a75-ad75-cb41928ad8c7" class="image" style="text-align:left"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2011.png"><img style="width:480px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2011.png"/></a></figure><p id="f3d954b5-f1a4-444d-9c4e-74d25e9d30b3" class=""><strong>Location:</strong> Coastal area with substantial tidal range.</p><table id="42a78de1-6f6f-4ca4-9e9d-0ff8749af589" class="simple-table"><tbody><tr id="c3cc6977-df29-4320-9097-a1d5d12c4943"><td id="C?r\" class=""><strong>Aspect</strong></td><td id="QaoT" class="" style="width:504px"><strong>Description</strong></td></tr><tr id="cc66eb16-4643-4fd9-abce-03a5c86e6494"><td id="C?r\" class="">Tidal Turbines</td><td id="QaoT" class="" style="width:504px">Installed at basin entrance, resemble underwater wind turbines.</td></tr><tr id="b0b48170-35c3-48a4-96e6-e73c8b710f7a"><td id="C?r\" class="">Tidal Flow</td><td id="QaoT" class="" style="width:504px">High Tide: Generates electricity. Low Tide: Potential for additional power.</td></tr><tr id="3e5bcbfe-cd6a-40c0-ba49-2d461abfea7f"><td id="C?r\" class="">Electricity Generation</td><td id="QaoT" class="" style="width:504px">Turbines convert tidal energy to power grids.</td></tr><tr id="751dd467-2942-434d-b2a8-2164349eea91"><td id="C?r\" class="">Consistency</td><td id="QaoT" class="" style="width:504px">Predictable tidal cycles.</td></tr><tr id="36828d53-d02d-433d-8dc1-6d6a291af695"><td id="C?r\" class="">Environmental Impact</td><td id="QaoT" class="" style="width:504px">Relatively low, with local ecosystem considerations.</td></tr></tbody></table><div id="02f47b62-ddd3-4820-9357-fe6bb1e750b9" class="column-list"><div id="647a7eb9-da96-4e74-9876-acfc0ef96047" style="width:50%" class="column"><p id="a9340d7b-0a52-42c7-b318-876fc69418eb" class=""><strong>Advantages:</strong><div class="indented"><ul id="ff7f55a5-e4ad-4b83-a325-c93b8210bff1" class="bulleted-list"><li style="list-style-type:disc">Predictable energy source.</li></ul><ul id="9f1ac928-54a3-41de-bf4d-4512c4ff36e9" class="bulleted-list"><li style="list-style-type:disc">Low environmental impact.</li></ul><ul id="9dcb87f5-e700-4c7b-bd38-66fac2a6267a" class="bulleted-list"><li style="list-style-type:disc">Uses renewable tidal energy.</li></ul></div></p></div><div id="e3a4ea40-fda7-45f2-b4a7-69bffed72d4b" style="width:50%" class="column"><p id="904373df-29fd-4dc3-bbd8-8c9f5c0311f2" class=""><strong>Challenges:</strong><div class="indented"><ul id="e4c2f64a-7087-4012-80ec-fd52b5a4ceaa" class="bulleted-list"><li style="list-style-type:disc">High initial costs.</li></ul><ul id="8c1baa81-5c48-42b4-8e71-8c05f310270d" class="bulleted-list"><li style="list-style-type:disc">Limited geographical suitability.</li></ul><ul id="47761586-9a80-4ce5-a8b0-de253b880ee2" class="bulleted-list"><li style="list-style-type:disc">Ongoing environmental concerns.</li></ul></div></p></div></div><hr id="957395ec-a2e8-453a-aab1-234c92fc8220"/><p id="4d5eeb37-4bcd-40b6-a333-631f55967f67" class=""><strong>Mini hydel power plant and explain the operational features</strong></p><div id="9e4c52d2-03b7-419f-90b1-900a236ccdaa" class="column-list"><div id="bae4a456-a90b-43b8-9916-405333edbf62" style="width:43.75%" class="column"><p id="4d14bb6d-2961-4303-bff2-6887f4b490c0" class="">Mini hydel plants are small hydroelectric power plants that typically produce up to 100 kW of electricity by harnessing the energy from flowing water on small rivers or canals.</p><p id="c1679b32-7eb8-43a4-b32f-953eed172b51" class="">
+</p></div><div id="38532409-fb06-4eac-a226-05da93d3b538" style="width:56.25%" class="column"><figure id="376a4df3-1a0e-43b3-9cc6-630883915160" class="image" style="text-align:right"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2012.png"><img style="width:384px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2012.png"/></a></figure></div></div><p id="0c687064-92b1-4aee-b6a0-820d22534823" class="">
+</p><p id="329e1ebd-7694-4f56-9923-23986d4420f2" class="">Operational Features:</p><table id="db8d8c2c-334f-4bdd-807d-9f19e6a3f9fe" class="simple-table"><tbody><tr id="d0265df7-593a-4d89-8f0b-b74b3ce9a723"><td id="e][w" class="" style="width:167.6875px"><strong>Feature</strong></td><td id="~&lt;Tp" class="" style="width:479px"><strong>Description</strong></td></tr><tr id="29f0e1a6-5d11-4dc5-957f-ed6005b8ba91"><td id="e][w" class="" style="width:167.6875px">Intake</td><td id="~&lt;Tp" class="" style="width:479px">Diverts water to remove sediment.</td></tr><tr id="7fbb0465-1654-479d-9cc9-c6638f06c493"><td id="e][w" class="" style="width:167.6875px">Settling Basin</td><td id="~&lt;Tp" class="" style="width:479px">Separates sediment before water enters intake.</td></tr><tr id="15bb275b-19df-483b-b098-616dfdaaf6ec"><td id="e][w" class="" style="width:167.6875px">Forebay Tank</td><td id="~&lt;Tp" class="" style="width:479px">Reservoir for supplying water to the turbine.</td></tr><tr id="2ee274ec-87f5-418f-ac32-a1b057c993d9"><td id="e][w" class="" style="width:167.6875px">Penstock Pipe</td><td id="~&lt;Tp" class="" style="width:479px">Carries high-velocity water to the turbine.</td></tr><tr id="ca782b99-c153-4bd0-860b-f604fb6b528d"><td id="e][w" class="" style="width:167.6875px">Turbine</td><td id="~&lt;Tp" class="" style="width:479px">Generates rotational motion from water impact.</td></tr><tr id="cb82b586-271c-47a2-a236-7d2db0ab6595"><td id="e][w" class="" style="width:167.6875px">Generator</td><td id="~&lt;Tp" class="" style="width:479px">Converts turbine motion into electricity.</td></tr><tr id="eb7b6d14-9da5-44bb-ac9c-0fc18bdefb60"><td id="e][w" class="" style="width:167.6875px">Tailrace</td><td id="~&lt;Tp" class="" style="width:479px">Returns water to the river after turbine use.</td></tr><tr id="00e0c051-2172-4e8e-8b6a-b692383140bd"><td id="e][w" class="" style="width:167.6875px">Power Output</td><td id="~&lt;Tp" class="" style="width:479px">1 kW to 100 kW, varies with water flow.</td></tr><tr id="c61d0902-1229-4f01-bf52-d2f863e73937"><td id="e][w" class="" style="width:167.6875px">Run-of-River Design</td><td id="~&lt;Tp" class="" style="width:479px">No storage, resulting in seasonal power variations.</td></tr><tr id="d1ed0b4e-13ee-4846-a15c-0cff7efe96eb"><td id="e][w" class="" style="width:167.6875px">Automation</td><td id="~&lt;Tp" class="" style="width:479px">Operates automatically with electronic controllers.</td></tr><tr id="9aa31d1a-290d-4567-881e-2dac04d8c9d0"><td id="e][w" class="" style="width:167.6875px">Operating Costs</td><td id="~&lt;Tp" class="" style="width:479px">Low compared to larger hydro plants.</td></tr></tbody></table><hr id="2ee48ce2-7da5-46f7-8a9e-41398a79dba6"/><p id="628a1c34-f6bc-47a5-ae1f-8d4c00ef881a" class=""><strong>Main hurdles in the development of tidal energy</strong></p><table id="43e5ee86-dfa6-444d-8b33-ad1945bb02d2" class="simple-table"><tbody><tr id="5394967b-8b50-430e-9330-a597846bbc3e"><td id="e{BN" class="" style="width:274px"><strong>Hurdles in Tidal Energy Development</strong></td><td id="UvS@" class="" style="width:529px"><strong>Description</strong></td></tr><tr id="b36fa1f5-f306-4d7f-9f61-9a7ce90b9168"><td id="e{BN" class="" style="width:274px">High upfront costs</td><td id="UvS@" class="" style="width:529px">Turbines and infrastructure require significant investments.</td></tr><tr id="1764e61e-3313-472a-8baa-4439cfada28e"><td id="e{BN" class="" style="width:274px">Threats to marine life</td><td id="UvS@" class="" style="width:529px">Rotating blades pose risks to sea creatures.</td></tr><tr id="1110a97a-4e2b-48e2-8bbd-cb7e9f0f3f4b"><td id="e{BN" class="" style="width:274px">Difficult ocean accessibility</td><td id="UvS@" class="" style="width:529px">Remote and harsh environments present logistical challenges.</td></tr><tr id="a68fd66a-9642-4661-8898-b365c7f8f989"><td id="e{BN" class="" style="width:274px">Immature technology</td><td id="UvS@" class="" style="width:529px">Ongoing research and development needed for technological improvement.</td></tr><tr id="0cea009c-9f6a-4d02-849b-a6fc8e240eac"><td id="e{BN" class="" style="width:274px">Intermittent output</td><td id="UvS@" class="" style="width:529px">Power generation is dependent on tidal cycles.</td></tr><tr id="c7a0f8c9-00a9-46a0-8718-e029ced26a3b"><td id="e{BN" class="" style="width:274px">Expensive maintenance</td><td id="UvS@" class="" style="width:529px">Corrosive underwater conditions result in high maintenance costs.</td></tr></tbody></table><hr id="01e05431-bfd2-4f46-a128-6c39e3ef13b7"/><p id="4ff50a4c-c4af-412c-89a9-803d5dbb143a" class="">Module 5 </p><p id="7bd05dc1-343c-40aa-bf2d-479b01914bf3" class=""><strong>Carnot Cycle <br/><br/></strong>Theoretical thermodynamic cycle representing the most efficient process possible for converting heat energy into work, consisting of reversible isothermal and adiabatic processes.</p><p id="5ad103ed-79b5-44dc-b69f-72a8de45ec92" class=""><strong>Carnot Cycle Features:</strong></p><ol type="1" id="51c15ff1-63eb-44ac-b9d8-5f322c5d110e" class="numbered-list" start="1"><li><strong>Reversibility:</strong> Idealized reversible processes.</li></ol><ol type="1" id="d4be6d78-ffd7-4bdb-b2ec-aaec90b0a4e5" class="numbered-list" start="2"><li><strong>Efficiency:</strong> Sets the maximum efficiency for a heat engine.</li></ol><ol type="1" id="0d0aca6a-a556-4591-8426-9c9b1687c9d8" class="numbered-list" start="3"><li><strong>Isothermal Processes:</strong> Heat transfer at constant temperature.</li></ol><ol type="1" id="d523ae28-6eb7-47ff-840a-ed0a9461aa6a" class="numbered-list" start="4"><li><strong>Adiabatic Processes:</strong> Includes adiabatic expansion and compression.</li></ol><p id="a8c7f4d7-0bbb-461d-a15f-fb4b56b812ed" class=""><strong>Carnot Cycle Limitations:</strong></p><ol type="1" id="63c96f25-901f-45ea-8ef1-bc4e37cd79f6" class="numbered-list" start="1"><li><strong>Idealization:</strong> Assumes reversible processes, not realistic.</li></ol><ol type="1" id="0a4d0dbd-29f1-4a1d-81d7-e7585d1d14ba" class="numbered-list" start="2"><li><strong>Practical Implementation:</strong> Challenges in achieving near-Carnot efficiency.</li></ol><ol type="1" id="28c7c062-82c0-4089-8c47-0a8325ce0c83" class="numbered-list" start="3"><li><strong>Finite Heat Capacities:</strong> Assumes infinite heat reservoir capacities, impractical.</li></ol><ol type="1" id="9b506bdf-8343-49ea-854f-56885db7241e" class="numbered-list" start="4"><li><strong>Engine Design:</strong> Difficulties in realizing ideal processes in actual engines.</li></ol><ol type="1" id="f0e0f6da-121c-4859-aea1-da2e2c7bcd99" class="numbered-list" start="5"><li><strong>Material Constraints:</strong> Assumes ideal gas, not always practical.</li></ol><ol type="1" id="5620c30a-976e-4d84-ae3a-d258ebe4c84a" class="numbered-list" start="6"><li><strong>Limited Applicability:</strong> Theoretical insights may not apply universally.</li></ol><hr id="97aa52cd-8321-40d0-a6ca-a42a022f62d6"/><figure id="a07be24c-76a9-4001-ba1e-fd682c90517f" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2013.png"><img style="width:850px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2013.png"/></a></figure><p id="0e15bdd8-171e-4f8d-825d-fe4a6db7fd2b" class=""><strong>Open-cycle MHD</strong></p><p id="5b93c0ad-d854-446f-9e4e-203f34a5429d" class="">Open-cycle MHD systems convert high-temperature ionized gas (plasma) directly into electricity using magnetic and electric fields, without recirculating the working fluid.</p><table id="f95ec0c8-f18d-4f0c-aef9-daefacc6ea74" class="simple-table"><tbody><tr id="ab0e2030-46a4-4f8c-861a-e2a8806e9fdd"><td id="}D_T" class="" style="width:250px"><strong>Step</strong></td><td id="f&lt;{F" class="" style="width:673px"><strong>Description</strong></td></tr><tr id="60b80ff7-8f22-4cba-a93a-ae4d2fb63f21"><td id="}D_T" class="" style="width:250px"><strong>1. Ionization</strong></td><td id="f&lt;{F" class="" style="width:673px">High-temperature gas (e.g., helium or argon) is heated, leading to ionization and plasma formation.</td></tr><tr id="e4b38c39-8b5b-41b3-b0f9-3ec4e1329e94"><td id="}D_T" class="" style="width:250px"><strong>2. Acceleration</strong></td><td id="f&lt;{F" class="" style="width:673px">Conductive plasma passes through magnetic and electric fields.</td></tr><tr id="31783601-f02d-4c16-bfbf-afedae16251a"><td id="}D_T" class="" style="width:250px"></td><td id="f&lt;{F" class="" style="width:673px">Fields interact with charged particles, inducing motion.</td></tr><tr id="af2116a2-87e2-4f24-8d13-2cf521b4c6e3"><td id="}D_T" class="" style="width:250px"><strong>3. Electromagnetic Induction</strong></td><td id="f&lt;{F" class="" style="width:673px">Moving charged particles in the magnetic field generate electric currents.</td></tr><tr id="d3185339-10fa-4290-b2df-1778df19acaa"><td id="}D_T" class="" style="width:250px"><strong>4. Electricity Generation</strong></td><td id="f&lt;{F" class="" style="width:673px">Extracted electric currents are used to generate electricity.</td></tr><tr id="f19b48d6-1c8f-4016-960e-203181b988e4"><td id="}D_T" class="" style="width:250px"><strong>5. Exhaust</strong></td><td id="f&lt;{F" class="" style="width:673px">Spent plasma is expelled from the system.</td></tr></tbody></table><hr id="5063c0ab-4e68-4b18-afad-e4292334f3d3"/><figure id="a3cf37f2-f109-4c4f-8556-407df85fd750" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2014.png"><img style="width:576px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2014.png"/></a></figure><p id="56293e45-8a02-4f7a-a434-1089305ec58f" class="">
+</p><p id="a50a9f85-b78b-4632-93a3-2eae94385e8e" class=""><strong>Closed-cycle MHD</strong></p><p id="e4eadc84-926e-49f6-9a8a-1a8976fa2b97" class="">Systems use ionized gas as a working fluid, converting high-temperature thermal energy directly into electricity through magnetic and electric fields. The working fluid is recirculated for sustained operation.</p><table id="1315930a-3e34-4af3-99a6-86e80e8fb5b1" class="simple-table"><tbody><tr id="5bf6c818-b876-490e-8eef-f0c5b6fd222f"><td id="@nMZ" class="" style="width:212px"><strong>Step</strong></td><td id="=RuQ" class="" style="width:490px"><strong>Description</strong></td></tr><tr id="5f749d93-3d93-4035-98d6-2790676ed846"><td id="@nMZ" class="" style="width:212px">1. Working Fluid</td><td id="=RuQ" class="" style="width:490px">High-temperature gas (ionized plasma) serves as the working fluid.</td></tr><tr id="a27b64f8-e8dc-4b82-94eb-06cb9709d3f8"><td id="@nMZ" class="" style="width:212px">2. Ionization</td><td id="=RuQ" class="" style="width:490px">Heating induces ionization, forming conductive plasma.</td></tr><tr id="84d11c01-2c4c-4ae7-a242-d10920b74695"><td id="@nMZ" class="" style="width:212px">3. Acceleration</td><td id="=RuQ" class="" style="width:490px">Plasma moves through magnetic and electric fields, inducing motion.</td></tr><tr id="cf0ecf39-af1a-40ea-9daa-476f062e459f"><td id="@nMZ" class="" style="width:212px"></td><td id="=RuQ" class="" style="width:490px">Fields interact with charged particles.</td></tr><tr id="9565081e-8c2f-4b6a-8600-c759822f247f"><td id="@nMZ" class="" style="width:212px">4. Electromagnetic Induction</td><td id="=RuQ" class="" style="width:490px">Moving charged particles generate electric currents.</td></tr><tr id="3863046f-175d-4bb9-8d3e-d5cf6aba1477"><td id="@nMZ" class="" style="width:212px">5. Electricity Generation</td><td id="=RuQ" class="" style="width:490px">Extracted currents generate electricity.</td></tr><tr id="f9fc7060-fe29-440d-bd76-7a6827e0180c"><td id="@nMZ" class="" style="width:212px">6. Cooling and Recirculation</td><td id="=RuQ" class="" style="width:490px">Spent fluid is cooled and recirculated for reuse.</td></tr></tbody></table><hr id="d41d1126-1d44-4046-8e43-c509ad004dad"/><p id="e7cfcc5a-e708-4111-8fec-62db6162865c" class=""><strong>What is a fuel cell? Explain the working principle of fuel cell with a neat diagram.</strong></p><div id="de223d34-6a97-4619-bba4-51c9d375cf68" class="column-list"><div id="d5886119-4a6b-4c2e-9b6a-ebd354373fdd" style="width:37.5%" class="column"><figure id="1d05c83e-5483-4f0e-bb9c-38017e5759cb" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2015.png"><img style="width:823px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2015.png"/></a></figure></div><div id="3fef7be9-3dda-4036-b380-f3ad4be7f912" style="width:62.5%" class="column"><ul id="b0950700-6726-4de0-8c8d-66536b2ada0e" class="bulleted-list"><li style="list-style-type:disc">Anode (H2 supply)</li></ul><ul id="6d7b394a-e04a-43ce-8b21-fe677a961919" class="bulleted-list"><li style="list-style-type:disc">Cathode (O2 supply)</li></ul><ul id="cf51e8d4-7b34-43dc-b156-4d0eaedef3e6" class="bulleted-list"><li style="list-style-type:disc">Electrolyte (Proton exchange membrane)</li></ul><ul id="70c224c4-222c-4b72-9ebf-4f6b31c7b827" class="bulleted-list"><li style="list-style-type:disc">External Circuit (Electron flow)</li></ul><p id="cab02762-4439-44a9-9989-4fdd54ec984b" class="">
+</p></div></div><p id="5795d017-1ae8-4b02-bec6-3f1d60f252f8" class=""><strong>Working Principle:</strong></p><p id="5858844d-82dd-496a-a347-6ba72bcc6933" class=""><strong>Fuel Input:</strong></p><ul id="5cda94d5-c026-4670-b8ee-d5aa60ba6447" class="bulleted-list"><li style="list-style-type:disc">Hydrogen (H2) supplied to anode. </li></ul><ul id="1f162734-7c57-4f53-9d7b-40e3ca4e6838" class="bulleted-list"><li style="list-style-type:disc">Oxygen (O2) from the air supplied to cathode.</li></ul><p id="66c1247d-6535-44de-939d-c785a4f45131" class=""><strong>Anode Reaction: </strong>Hydrogen splits into protons (H+) and electrons (e-).</p><figure id="4155bfe5-5bce-492b-93f2-bbb0442d931e" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mo>→</mo><mn>4</mn><msup><mi>H</mi><mo>+</mo></msup><mo>+</mo><mn>4</mn><msup><mi>e</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">2H_2 \rightarrow 4H^+ + 4e^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9047em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8213em;"></span><span class="mord">4</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="faf6a428-d15d-4131-9e91-35af0f8e72e4" class=""><strong>Electron Flow: </strong>Electrons create an external electric current.</p><p id="fee84882-e9fe-462c-8a49-b3ed6b21ab23" class=""><strong>Proton Migration: </strong>Protons move through an electrolyte.</p><p id="fb728c94-26fa-4da7-9abd-28666311eb3e" class=""><strong>Cathode Reaction: </strong>Oxygen combines with electrons and protons to form water.</p><figure id="050b5466-e404-4897-b4f4-41e5208255d7" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>O</mi><mn>2</mn></msub><mo>+</mo><mn>4</mn><msup><mi>H</mi><mo>+</mo></msup><mo>+</mo><mn>4</mn><msup><mi>e</mi><mo>−</mo></msup><mo>→</mo><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">O_2 + 4H^+ + 4e^- \rightarrow 2H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9047em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8213em;"></span><span class="mord">4</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span></div></figure><p id="045e8f14-d5fa-40c4-80a6-c092cd45dd8a" class=""><strong>Electricity Output: </strong>Electron flow generates electrical power.</p><figure id="9e7ea75c-dcf3-449b-b2eb-32b8b1df6932" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mo>+</mo><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">2H_2 + O_2 \rightarrow 2H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span></div></figure><hr id="f1b06201-9767-48b7-a6f0-11ef90f7fd70"/><p id="edc92a5e-0e9a-4573-baf3-b694236a301b" class=""><strong>Explain the heating and cooling applications of a thermoelectric system. List the materials used for low and high temperature applications.</strong></p><p id="061ebbfb-af09-491e-8939-e80f91b36b28" class=""><strong>Heating Applications:</strong></p><ol type="1" id="7f97efdf-cd78-4ae8-b689-9ae06131b6cb" class="numbered-list" start="1"><li><strong>Waste Heat Recovery: </strong>Converts industrial or exhaust waste heat into electricity.</li></ol><ol type="1" id="d7ce06e3-dc97-4195-ad90-6497b3c7edff" class="numbered-list" start="2"><li><strong>Portable Devices: </strong>Powers camping stoves, heaters, and portable devices.</li></ol><ol type="1" id="79674324-39e4-4514-9a40-4fcdb447532a" class="numbered-list" start="3"><li><strong>Automotive Efficiency: </strong>Utilizes engine waste heat to improve vehicle fuel efficiency.</li></ol><ol type="1" id="8556825f-8dc1-49a8-a62d-53c2f22cd943" class="numbered-list" start="4"><li><strong>Solar Power Generation: </strong>Converts sunlight into electricity for power and heating.</li></ol><p id="fa775b3d-cd67-403e-9ac6-e4120946bf01" class=""><strong>Cooling Applications:</strong></p><ol type="1" id="d8a0a3dd-2fe4-432c-9a8e-9b4c2638565c" class="numbered-list" start="1"><li><strong>Electronic Cooling: </strong>Cools electronic components like computer chips.</li></ol><ol type="1" id="ace539bf-7a18-4d03-b7a5-9af1441ad422" class="numbered-list" start="2"><li><strong>Refrigeration: </strong>Used in small refrigerators and coolers.</li></ol><ol type="1" id="594e76cd-5f32-43d1-8241-a9705f77604b" class="numbered-list" start="3"><li><strong>Medical Cooling: </strong>Maintains low temperatures for medical storage.</li></ol><ol type="1" id="a8a50fee-df5a-40a2-b0d2-cdebb595bc82" class="numbered-list" start="4"><li><strong>Automotive Seat Cooling: </strong>Enhances driving comfort with thermoelectric-cooled seats.</li></ol><p id="38f355bd-ed6f-4a85-a117-6bde71f644c0" class=""><strong>Materials:</strong></p><p id="d8a062d4-6e09-4f4f-91d1-cafa00c2c71f" class=""><strong>Low-Temperature:</strong></p><ul id="ddc51566-94c1-4f24-b2ff-df5fdac308bf" class="bulleted-list"><li style="list-style-type:disc"><strong>Bismuth Telluride (Bi2Te3):</strong> Common for room temperature and moderate cooling.</li></ul><p id="82e77c9d-e390-4276-962f-c6a451a53770" class=""><strong>High-Temperature:</strong><div class="indented"><ul id="6bf48f3a-c2d0-4829-b1bf-71772f149a8f" class="bulleted-list"><li style="list-style-type:disc"><strong>Skutterudites:</strong> Suitable for high-temperature applications.</li></ul><ul id="58527fdc-f4d7-48be-8e71-881fdd444d8e" class="bulleted-list"><li style="list-style-type:disc"><strong>Silicon Germanium (SiGe):</strong> Used in mid-temperature range.</li></ul><ul id="72d7219a-b94b-466c-951e-86d713d85cc1" class="bulleted-list"><li style="list-style-type:disc"><strong>Half-Heusler Alloys:</strong> Explored for high-temperature thermoelectric uses.</li></ul></div></p><hr id="588c2165-b4d3-4018-b2c4-c4659fd462b6"/><p id="cfec12e8-8d5c-4bc5-a587-d8364aa6b7fa" class=""><strong>Peltier Effect:</strong> Electric current through junction of different materials causes heating or cooling.</p><p id="75e8bb7e-77eb-4f4c-9847-c6adfcc41189" class=""><span style="border-bottom:0.05em solid">Example</span><strong>:</strong> Peltier coolers in portable refrigerators use this effect to cool beverages.</p><p id="3d209c98-f3d4-48e5-a998-4bffddea1fb3" class="">
+</p><p id="877a78b0-d351-4771-a992-00f0edb459aa" class=""><strong>Seebeck Effect: </strong>Voltage generated when two dissimilar materials have a temperature difference.</p><p id="5804590e-8a05-4f2a-a88e-465ac7683769" class=""><span style="border-bottom:0.05em solid">Example</span><strong>:</strong> Thermocouples convert heat from a flame into electricity for temperature measuremt</p><p id="73c611c4-8d5d-4c7d-bea7-df4c63824293" class="">
+</p><p id="6aaa392a-60a0-4580-be9c-ae68f77816e9" class=""><strong>Joule Effect: </strong>Heating observed when electric current flows through a conductor.</p><p id="017ffa36-f0c0-4f07-ac10-7f99552cbc78" class=""><span style="border-bottom:0.05em solid">Example</span><strong>:</strong> The heating of a wire in an electric stove when current passes through it.</p><p id="cd283ab7-4165-4212-a785-7194ccf47cc8" class="">
+</p><p id="990b33bd-733a-44b0-8fa4-8487b509cb01" class=""><strong>Hall Effect: </strong>Voltage generated perpendicular to current and magnetic field in a conductor.</p><p id="e9cc0288-757c-477d-94c0-38cc36662b0d" class=""><span style="border-bottom:0.05em solid">Example</span><strong>:</strong> Hall effect sensors in speedometers use this to measure the speed of a rotating gear.</p><hr id="213e2f28-8bfb-49eb-9461-0bb409d8ac78"/><figure id="e9260218-39b1-4cd8-a4f0-d5f3310ca7bc" class="image"><a href="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2016.png"><img style="width:384px" src="MID%20ONLY%204174d3ba53f94077be270f3fb8d8fe9c/Untitled%2016.png"/></a></figure><p id="bc8cd0e7-0040-4579-a895-93e2a3c7a6e3" class="">
+</p><p id="c1047d13-31af-41d2-a012-20ca40cd1814" class=""><strong>Classify geothermal energy harnessing techniques and explain the working of hot dry rock geothermal source power plant.</strong></p><p id="f25a1f68-ffa0-4b71-bddf-593cd942c347" class=""><strong>Classification of Geothermal Energy Harnessing Techniques:</strong></p><p id="bee49374-4af3-4fc7-993f-6fedfd47a3f4" class="">Geothermal energy harnessing techniques can be broadly classified into three main types</p><p id="f1445eb9-dbcc-49c1-9201-5027f2c41c43" class=""><strong>Geothermal Energy Techniques:</strong></p><ol type="1" id="db68d3c5-0fed-4f2b-92d7-41b27273675b" class="numbered-list" start="1"><li><strong>Direct Use:</strong> Uses geothermal hot water for heating, agriculture, and industry.</li></ol><ol type="1" id="b73988f6-3a81-4516-b01c-ffee7359e78a" class="numbered-list" start="2"><li><strong>Power Generation:</strong><ul id="6b066af4-1c97-4052-9d65-698129deca8c" class="bulleted-list"><li style="list-style-type:disc"><strong>Flash Plants:</strong> Convert high-pressure geothermal fluid to steam for electricity.</li></ul><ul id="3fe9fa6c-cfcc-4e2f-acb6-e7eab40b2e68" class="bulleted-list"><li style="list-style-type:disc"><strong>Binary Plants:</strong> Transfer heat to a low-boiling liquid for power.</li></ul><ul id="10234a9c-3b7e-41e1-a5c1-d9969298e4ef" class="bulleted-list"><li style="list-style-type:disc"><strong>Dry Steam Plants:</strong> Use geothermal steam directly for electricity.</li></ul></li></ol><ol type="1" id="90a0beca-7eb4-4506-8303-1264e8cbaec6" class="numbered-list" start="3"><li><strong>Heat Pumps:</strong> Provides heating, cooling, and hot water using stable subsurface temperatures</li></ol><p id="22b1d224-c85c-4927-8b2c-3ea16fae599e" class="">
+</p><p id="78787c5a-cd14-47a2-b625-5c7f4ffb5111" class=""><strong>Working of Hot Dry Rock (HDR) Geothermal Power Plant:</strong></p><p id="b86012ef-dbc1-4b8c-bfc6-cb6f013575b6" class="">The Hot Dry Rock (HDR) geothermal source, also known as Enhanced Geothermal Systems (EGS), involves creating a geothermal reservoir in hot impermeable rock by stimulating fractures. The process includes the following steps:</p><ol type="1" id="43e8b62b-42f9-46e5-b250-7f945b2a54c4" class="numbered-list" start="1"><li><strong>Drilling: </strong>Two wells drilled into hot impermeable rock - injection and production wells.</li></ol><ol type="1" id="0ffa1ceb-5a03-4173-9991-af3416e7529e" class="numbered-list" start="2"><li><strong>Water Injection: </strong>Cold water injected into the rock to create fractures.</li></ol><ol type="1" id="1ebd12af-d611-4af5-8dfe-5eea180db0e9" class="numbered-list" start="3"><li><strong>Heat Extraction: </strong>Fractures filled with pressurized hot water as it circulates.</li></ol><ol type="1" id="6c2e433d-8953-428b-b333-12134c3899ff" class="numbered-list" start="4"><li><strong>Production Well Operation: </strong>Pumped hot water brought to the surface through the production well.</li></ol><ol type="1" id="5fd091d3-0cbc-4f26-aae0-9af23045c2b2" class="numbered-list" start="5"><li><strong>Power Generation: </strong>Hot water used to produce steam that drives a turbine for electricity.</li></ol><ol type="1" id="78739984-dc39-408a-a260-b0596f816dce" class="numbered-list" start="6"><li><strong>Reinjection: </strong>Cooled water reinjected into the rock for the cycle to repeat.</li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
